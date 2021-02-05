@@ -32,10 +32,50 @@
   width: 300px;
 }
 
+.memberrole {
+  background-color: chocolate;
+  padding: 5px;
+  border-radius: 20px;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.membersCard {
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 13px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 13px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 13px -7px rgba(0, 0, 0, 0.75);
+
+  transition-timing-function: ease-in-out;
+  transition: 1s;
+}
+
+.LecurersImages {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  -webkit-box-shadow: 0px 0px 19px 6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 19px 6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 19px 6px rgba(0, 0, 0, 0.75);
+}
+
+.LecturerInfoColOne {
+  text-align: left;
+  margin-top: 6%;
+}
+
+.LecturerInfoColTwo {
+  text-align: right;
+  margin-top: 6%;
+}
+
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (min-width: 400px) {
   .AboutUsRowOne:hover {
     transform: scale(1.1);
+  }
+  .membersCard:hover {
+    transform: scale(1.05);
   }
 }
 

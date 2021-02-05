@@ -8,6 +8,9 @@ import Logo from "./img/logoWhite.png";
 import "./aboutus.css";
 import "../../App.css";
 
+import CommetteMember from "./CommetteMember";
+import LecturersComponent from "./Lecturers";
+
 export default function AboutUs() {
   useEffect(() => {
     AOS.init();
@@ -48,6 +51,14 @@ export default function AboutUs() {
               have evolved
             </p>
           </div>
+        </div>
+
+        <div className="AboutUsComponent">
+          <CommetteMember />
+        </div>
+
+        <div className="AboutUsComponent">
+          <LecturersComponent />
         </div>
       </div>
     </div>
