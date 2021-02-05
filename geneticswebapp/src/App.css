@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
@@ -10,7 +11,7 @@
 }
 
 body {
-  font-family: "Roboto Condesed" sans-serif ;
+  font-family: "Roboto Condesed" sans-serif;
 }
 
 /***********************NAVBAR*************************/
@@ -31,13 +32,13 @@ nav a.nav-link {
 }
 
 nav ul li {
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
 
-.navbar-nav > li > a{
+.navbar-nav > li > a {
   font-size: 0.9rem;
-  margin-right: 0.75rem ;
-  margin-left: 0.75rem ;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
   color: var(--primary-white) !important ;
   border-top: 3px solid var(--primary-dark);
 }
@@ -46,14 +47,18 @@ nav ul li {
   max-width: 9rem;
   padding: 0 !important;
   height: 10rem !important;
-  
 }
-.navbar-brand img{
+.navbar-brand img {
   width: 100%;
 }
 
-.navbar-nav > li > a.active, .navbar-nav > li >a.active:focus{
-  border-top: 3px solid var(--primary-orange); 
+.navbar-nav > li > a.active,
+.navbar-nav > li > a.active:focus {
+  border-top: 3px solid var(--primary-orange);
+}
+
+.navbar-nav > li > a:hover {
+  border-top: 3px solid var(--primary-orange);
 }
 
 .navbar-nav > li > a:hover{
@@ -110,4 +115,13 @@ nav ul li {
   height: 100vh;
   width: 100vw;
   z-index: 1;
+}
+.HrBreaker {
+  width: 75%;
+  border: none;
+  height: 5px;
+  border-radius: 20px;
+  /* Set the hr color */
+  color: rgb(233, 159, 0); /* old IE */
+  background-color: rgb(233, 159, 0); /* Modern Browsers */
 }

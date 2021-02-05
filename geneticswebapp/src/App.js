@@ -4,6 +4,8 @@ import Particles from "react-particles-js"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Navbar from "./components/Navbar";
 import Header from "./components/Header"
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import AboutUs from "./components/AboutComponent/AboutUs";
 
 function App() {
   return (
@@ -28,11 +30,18 @@ function App() {
           }
         }}
       />
-       <Navbar/>
-       <Header />
+      <Router>
+      <div>
+        <Navbar />
+        <Header />
+        <Route path="/about" exact component={AboutUs} />
+      </div>
+    </Router>
+       
+       
     </React.Fragment>
-   
   );
+
 }
 
 export default App;
