@@ -35,6 +35,7 @@ function App() {
           <Navbar />
           <Route path="/" exact>
             <Header />
+            <AboutUs />
           </Route>
 
           <Route path="/about" exact component={AboutUs} />
