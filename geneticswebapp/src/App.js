@@ -32,9 +32,10 @@ function App() {
               },
             }}
           />
-          <Navbar />
-          <Route path="/" exact>
+            <Navbar />
             <Header />
+          <Route path="/" exact>
+           
             <AboutUs />
           </Route>
 
