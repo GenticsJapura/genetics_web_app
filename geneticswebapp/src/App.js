@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import AboutUs from "./components/AboutComponent/AboutUs";
+import Contactsection from "./components/ContactComponent/ConatctUs.Component";
 
 function App() {
   return (
@@ -32,10 +33,14 @@ function App() {
               },
             }}
           />
-          <Navbar />
-          <Route path="/" exact>
+            <Navbar />
             <Header />
+          <Route path="/" exact>
+           
             <AboutUs />
+            <section>
+              <Contactsection></Contactsection>
+            </section>
           </Route>
 
           <Route path="/about" exact component={AboutUs} />

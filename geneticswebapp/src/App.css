@@ -17,7 +17,8 @@ body {
 /***********************NAVBAR*************************/
 
 nav {
-  z-index: 2;
+ 
+  overflow: hidden;
 }
 
 .logo {
@@ -86,11 +87,25 @@ nav ul li {
 
 /************************HEADER************************/
 .header-wraper {
+ 
+  height: 100vh;
+ 
+}
+
+.bg-img{
   position: relative;
-  background-image: url(./img/banner.png);
+  background-image: url(./img/banner.png); 
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.navcontainer {
+  position: absolute;
+  z-index: 1;
+  /* margin: 20px; */
+  width: 100%;
 }
 
 .main-info {
