@@ -45,7 +45,7 @@
     #067fc9
   );
   padding: 5px;
-  border-radius: 20px;
+  border-radius: 40px;
   color: aliceblue;
   font-weight: bold;
 }
@@ -88,6 +88,15 @@
 
 .LecComponent {
   /*log*/
+}
+
+.MemberImage {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  -webkit-box-shadow: 0px 0px 19px 6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 19px 6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 19px 6px rgba(0, 0, 0, 0.75);
 }
 
 /* On screens that are 600px or less, set the background color to olive */
