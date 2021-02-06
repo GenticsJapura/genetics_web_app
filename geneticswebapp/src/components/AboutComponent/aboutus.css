@@ -1,20 +1,23 @@
 .AboutUsComponent {
-  /* background-color: blue; */
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
+.LecComponentRow {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 .AboutUsRowOne {
   padding: 5%;
-  /* background-image: url("./img//banner.jpg"); */
-  background-color: rgb(0, 115, 150);
+
   background-image: radial-gradient(
     circle,
-    #ffb400,
-    #f69100,
-    #ea6e00,
-    #dc4600,
-    #cb0000
+    #00327e,
+    #004591,
+    #0058a4,
+    #006bb7,
+    #067fc9
   );
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,13 +36,27 @@
 }
 
 .memberrole {
-  background-color: chocolate;
+  background-image: radial-gradient(
+    circle,
+    #00327e,
+    #004591,
+    #0058a4,
+    #006bb7,
+    #067fc9
+  );
   padding: 5px;
   border-radius: 20px;
   color: aliceblue;
   font-weight: bold;
 }
 
+.paratext {
+  background-color: rgb(162, 162, 163);
+  padding: 5px 10px;
+  border-radius: 50px;
+  color: aliceblue;
+  font-weight: bold;
+}
 .membersCard {
   border-radius: 20px;
   -webkit-box-shadow: 10px 10px 13px -7px rgba(0, 0, 0, 0.75);
@@ -61,12 +78,15 @@
 
 .LecturerInfoColOne {
   text-align: left;
-  margin-top: 6%;
+  margin-top: 8%;
 }
 
 .LecturerInfoColTwo {
   text-align: right;
-  margin-top: 6%;
+  margin-top: 8%;
+}
+
+.LecComponent {
 }
 
 /* On screens that are 600px or less, set the background color to olive */
@@ -79,10 +99,37 @@
   }
 }
 
+.LecComponentDesktop {
+  display: block;
+}
+
+.LecComponentMobile {
+  display: none;
+}
+
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 400px) {
+  .LecComponentDesktop {
+    display: none;
+  }
+
+  .LecComponentMobile {
+    display: block;
+  }
+
   .AboutUsRowOne img {
     width: 200px;
     margin-bottom: 10px;
+  }
+
+  .LecurersImages {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+
+  .LecturerInfoColOne {
+    text-align: center;
+    margin-top: 6%;
   }
 }

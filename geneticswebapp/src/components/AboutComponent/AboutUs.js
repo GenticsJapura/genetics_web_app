@@ -10,7 +10,8 @@ import "../../App.css";
 
 import CommetteMember from "./CommetteMember";
 import LecturersComponent from "./Lecturers";
-
+import LecturersMobileComponent from "./LecturersMobile";
+import Particle from "./particle";
 export default function AboutUs() {
   useEffect(() => {
     AOS.init();
@@ -18,7 +19,7 @@ export default function AboutUs() {
   return (
     <div className="AboutUsComponent">
       <div className="container">
-        <div className="row AboutUsRowOne">
+        <div className="row AboutUsRowOne ">
           <div
             className="col-lg-6 col-md-6 text-center"
             data-aos="zoom-out"
@@ -57,8 +58,13 @@ export default function AboutUs() {
           <CommetteMember />
         </div>
 
-        <div className="AboutUsComponent">
-          <LecturersComponent />
+        <div className="AboutUsComponent ">
+          <div className="LecComponentDesktop ">
+            <Particle />
+          </div>
+          <div className="LecComponentMobile ">
+            <LecturersMobileComponent />
+          </div>
         </div>
       </div>
     </div>
