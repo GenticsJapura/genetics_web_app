@@ -5,11 +5,12 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-light navbar-fixed-top">
       <div className="container">
-        <a className="navbar-brand" href="#">
+        {/* <a className="navbar-brand" href="#">
           <img src={logo} />
-        </a>
+        </a> */}
+        <h3 style={{ color: "white" }}>Genetic Society</h3>
         <button
           className="navbar-toggler"
           type="button"
