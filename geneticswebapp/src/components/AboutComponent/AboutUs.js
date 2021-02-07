@@ -41,15 +41,15 @@ export default function AboutUs() {
             <h3 className=" text-center">WHO WE ARE</h3>
             <hr className="HrBreaker" />
             <p className=" text-center">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English. Many desktop
-              publishing packages and web page editors now use Lorem Ipsum as
-              their default model text, and a search for 'lorem ipsum' will
-              uncover many web sites still in their infancy. Various versions
-              have evolved
+              The Genetics Society of Sri Jayewardenepura University is an
+              academic association among the University undergraduates under the
+              Applied Science Stream. It was founded by Prof. B.G.D.N. K de
+              Silva in 2010, with the objective to develop the knowledge on
+              genetics among school and University students in Sri Lanka. It is
+              one of the first few learned societies devoted to genetics. The
+              committee is managed by senior undergraduates of the University
+              and the membership of the society is shared among the University
+              undergraduates, research students and University academics.
             </p>
           </div>
         </div>
