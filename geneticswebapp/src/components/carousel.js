@@ -8,7 +8,7 @@ import ImageThree from "./images/img3.jpg";
 
 const CarouselDemo = () => {
   return (
-    <div>
+    <div className="corouseldemo container mt-5 mb-5">
       <Carousel>
         <Carousel.Item interval={1000}>
           <img className="d-block w-100" src={ImageOne} alt="First slide" />
