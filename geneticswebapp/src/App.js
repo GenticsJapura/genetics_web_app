@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import AboutUs from "./components/AboutComponent/AboutUs";
 import Contactsection from "./components/ContactComponent/ConatctUs";
-// import  CarouselDemo from "./components/carousel"
+import  CarouselDemo from "./components/carousel"
 import Footer from "./components/Footer"
 import SocietyInfo from "./components/SocietyInfoComponent/SocietyInfo";
 
@@ -103,15 +103,10 @@ function App() {
               retina_detect: true,
             }}
           />
-<<<<<<< HEAD
-            <Navbar />
-            <Header />
-            {/* <CarouselDemo /> */}
-=======
           <Navbar />
           <Header />
->>>>>>> 487dc21582d4c6e9f8a01ba573a670e9d2eabfa6
           <Route path="/" exact>
+            <CarouselDemo />
             <SocietyInfo />
             <AboutUs />
             <section>
