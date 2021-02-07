@@ -1,15 +1,14 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 // import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import emailjs from "emailjs-com";
 import { init } from "emailjs-com";
-
-
+import { styled } from "@material-ui/core";
 
 export default function Contactsection() {
+  
 
- 
   init("user_17nXRu6uDfNlxC194GMjM");
   function sendEmail(e) {
     e.preventDefault();
@@ -33,37 +32,37 @@ export default function Contactsection() {
     e.target.reset();
   }
 
-  const handleSubmit=()=>{
-
-  }
+ 
 
   return (
     
 
     <div
-    data-aos="fade-down"
-    data-aos-easing="linear"
-    data-aos-duration="1500"
+      data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
       style={{ marginTop: "5%" }}
       id="contact"
       class="container-fluid text-center bg-grey"
     >
       {/* <!-- Container (Contact Section) --> */}
-      <div style={{marginBottom:'5%'}}>
-        <h2 class="text-center" style={{marginBottom:'5%'}}>Contact Us</h2>
+      <div style={{ marginBottom: "5%" }}>
+        <h2 class="text-center" style={{ marginBottom: "5%" }}>
+          Contact Us
+        </h2>
         <div class="row">
           {/* <div class="col-md-5">
             <img style={{height:'55%'}} src={contact}></img>
           </div> */}
           <div class="col-md-12 slideanim">
-            <form noValidate autoComplete="off" onSubmit={sendEmail}>
+            <form autoComplete={false} onSubmit={sendEmail}>
               <TextField
                 id="outlined-basic"
                 label="Full Name"
                 size="medium"
                 variant="outlined"
                 name="name"
-                required
+                required={true}
                 style={{ width: "80%", fontSize: "15px" }}
               
               />
@@ -72,21 +71,22 @@ export default function Contactsection() {
               <TextField
                 id="outlined-basic"
                 label="Email"
-                type='email'
+                type="email"
                 size="medium"
                 name="email"
                 variant="outlined"
-                required
+                required={true}
                 style={{ width: "80%", margin: "15px", fontSize: "15px" }}
                
               />
-                <TextField
+             
+              <TextField
                 id="outlined-basic"
                 label="Subject"
                 size="medium"
                 name="subject"
                 variant="outlined"
-                required
+                required={true}
                 style={{ width: "80%", margin: "15px", fontSize: "15px" }}
                
               />
@@ -99,7 +99,7 @@ export default function Contactsection() {
                 name="message"
                 rows={4}
                 variant="outlined"
-                required
+                required={true}
                 style={{ width: "80%", fontSize: "15px" }}
               />
 
