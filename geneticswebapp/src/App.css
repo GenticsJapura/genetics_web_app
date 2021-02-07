@@ -221,6 +221,9 @@ nav ul li {
     0 0 5px rgb(108, 108, 109);
 }
 
+.CaroselImage {
+  border-radius: 30px;
+}
 @media screen and (max-width: 400px) {
   .footer {
     background-image: url("./img/footer.png");
