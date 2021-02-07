@@ -26,21 +26,15 @@ nav {
 
 /***********************NAV LINKS**********************/
 nav {
-  background-image: linear-gradient(
-    to right bottom,
-    #0044a6,
-    #0044ab,
-    #0044b0,
-    #0044b5,
-    #0044ba,
-    #004dc2,
-    #0057cb,
-    #0060d3,
-    #1774df,
-    #2f88e9,
-    #479cf3,
-    #5faffb
+  background-image: radial-gradient(
+    circle,
+    #0d6fb5,
+    #0067b6,
+    #005eb6,
+    #0054b5,
+    #014ab3
   );
+  border-bottom: 2px solid white;
   margin: 0% 2%;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
@@ -91,7 +85,7 @@ nav ul li {
 
 .bg-img {
   position: relative;
-  background-image: url(./gen3.JPG);
+  background-image: url(./gen3.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -127,7 +121,11 @@ nav ul li {
 /************Typed text**************/
 .typed-text {
   font-size: 2rem;
+  font-weight: bolder;
   color: var(--primary-orange);
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(207, 207, 211),
+    0 0 5px rgb(108, 108, 109);
 }
 
 /*contacy us button*/
@@ -221,6 +219,14 @@ nav ul li {
   color: rgb(240, 176, 0);
 }
 
+.headerText {
+  font-size: 150px;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(207, 207, 211),
+    0 0 5px rgb(108, 108, 109);
+}
+
 @media screen and (max-width: 400px) {
   .footer {
     background-image: url("./img/footer.png");
@@ -228,5 +234,10 @@ nav ul li {
     margin: 0px auto;
     padding: 20px 0px 20px 0px;
     padding-top: 20%;
+  }
+
+  .headerText {
+    font-size: 50px;
+    font-weight: bolder;
   }
 }
