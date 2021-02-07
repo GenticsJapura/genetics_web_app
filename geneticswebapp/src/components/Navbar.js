@@ -27,12 +27,12 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="#">
+                <a class="nav-link js-scroll-trigger" href="#home">
                   Home <span className="sr-only">(current)</span>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a class="nav-link js-scroll-trigger" href="#about">
                   About us
                 </a>
               </li>
@@ -52,7 +52,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a class="nav-link js-scroll-trigger" href="#contact">
                   Contact us
                 </a>
               </li>
