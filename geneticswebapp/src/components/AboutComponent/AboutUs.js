@@ -58,7 +58,7 @@ export default function AboutUs() {
           </div>
 
           <div className="AboutUsComponent">
-            <CommetteMember />
+            <MainCommette />
           </div>
 
           <div className="AboutUsComponent ">

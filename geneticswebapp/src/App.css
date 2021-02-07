@@ -26,15 +26,16 @@ nav {
 
 /***********************NAV LINKS**********************/
 nav {
-  background-image: radial-gradient(
+  /* background-image: radial-gradient(
     circle,
     #0d6fb5,
     #0067b6,
     #005eb6,
     #0054b5,
     #014ab3
-  );
-  border-bottom: 2px solid white;
+  ); */
+  background-color: rgba(5, 106, 153, 0.8);
+  border-bottom: 4px solid white;
   margin: 0% 2%;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
