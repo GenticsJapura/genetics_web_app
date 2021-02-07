@@ -11,13 +11,19 @@ function Footer() {
             <h5>Links</h5>
             <ul className="list-unstyled">
               <li>
-                <Link to="/home">Home</Link>
+              <a class="nav-link js-scroll-trigger" href="#home">
+                  Home <span className="sr-only">(current)</span>
+                </a>
               </li>
               <li>
-                <Link to="/aboutus">About Us</Link>
+              <a class="nav-link js-scroll-trigger" href="#about">
+                  About us
+                </a>
               </li>
               <li>
-                <Link to="/contactus">Contact Us</Link>
+              <a class="nav-link js-scroll-trigger" href="#contact">
+                  Contact us
+                </a>
               </li>
             </ul>
           </div>
@@ -47,22 +53,22 @@ function Footer() {
                 <i className="fa fa-google-plus" />
               </a>
               <a
-                // className="btn btn-social-icon btn-facebook"
+                 className="btn btn-social-icon btn-facebook"
                 href=""
               >
-                 <i className="fa fa-facebook"></i>
+              <i class="fab fa-facebook-square fa-3x"></i>
               </a>
               <a
                 className="btn btn-social-icon btn-linkedin"
                 href=""
               >
-                <i className="fa fa-linkedin" />
+                <i class="fab fa-linkedin fa-3x"></i>
               </a>
               <a
                 className="btn btn-social-icon btn-twitter"
                 href=""
               >
-                <i className="fa fa-twitter" />
+                <i class="fab fa-twitter fa-3x"></i>
               </a>
               <a
                 className="btn btn-social-icon btn-google"
