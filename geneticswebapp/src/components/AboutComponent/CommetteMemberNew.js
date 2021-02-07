@@ -5,7 +5,7 @@ import member2 from "./img/member2.jpg";
 
 export default function CommetteMember() {
   return (
-    <div>
+    <div className="CommetteMemberDiv">
       <div className="row AboutUsComponent">
         <div className="col-md-12 text-center">
           <h3>COMMITTEE MEMBERS</h3>
