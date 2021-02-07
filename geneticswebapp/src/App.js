@@ -9,6 +9,7 @@ import AboutUs from "./components/AboutComponent/AboutUs";
 import Contactsection from "./components/ContactComponent/ConatctUs";
 // import  CarouselDemo from "./components/carousel"
 import Footer from "./components/Footer"
+import SocietyInfo from "./components/SocietyInfoComponent/SocietyInfo";
 
 function App() {
   return (
@@ -22,23 +23,23 @@ function App() {
                   value: 40,
                   density: {
                     enable: true,
-                    value_area: 800
-                  }
+                    value_area: 800,
+                  },
                 },
                 color: {
-                  value: "#ffffff"
+                  value: "#ffffff",
                 },
                 shape: {
                   type: "circle",
                   stroke: {
                     width: 8,
-                    color: "#f9ab00"
+                    color: "#f9ab00",
                   },
                   image: {
                     src: "img/github.svg",
                     width: 100,
-                    height: 100
-                  }
+                    height: 100,
+                  },
                 },
                 opacity: {
                   value: 0.4,
@@ -47,8 +48,8 @@ function App() {
                     enable: true,
                     speed: 1,
                     opacity_min: 0.1,
-                    sync: false
-                  }
+                    sync: false,
+                  },
                 },
                 size: {
                   value: 3,
@@ -57,8 +58,8 @@ function App() {
                     enable: true,
                     speed: 2,
                     size_min: 0.1,
-                    sync: false
-                  }
+                    sync: false,
+                  },
                 },
                 line_linked: {
                   enable_auto: true,
@@ -69,8 +70,8 @@ function App() {
                   condensed_mode: {
                     enable: false,
                     rotateX: 600,
-                    rotateY: 600
-                  }
+                    rotateY: 600,
+                  },
                 },
                 move: {
                   enable: true,
@@ -83,30 +84,35 @@ function App() {
                   attract: {
                     enable: false,
                     rotateX: 600,
-                    rotateY: 1200
-                  }
-                }
+                    rotateY: 1200,
+                  },
+                },
               },
               interactivity: {
                 detect_on: "canvas",
                 events: {
                   onhover: {
-                    enable: false
+                    enable: false,
                   },
                   onclick: {
-                    enable: false
+                    enable: false,
                   },
-                  resize: true
-                }
+                  resize: true,
+                },
               },
-              retina_detect: true
+              retina_detect: true,
             }}
           />
+<<<<<<< HEAD
             <Navbar />
             <Header />
             {/* <CarouselDemo /> */}
+=======
+          <Navbar />
+          <Header />
+>>>>>>> 487dc21582d4c6e9f8a01ba573a670e9d2eabfa6
           <Route path="/" exact>
-           
+            <SocietyInfo />
             <AboutUs />
             <section>
               <Contactsection></Contactsection>
