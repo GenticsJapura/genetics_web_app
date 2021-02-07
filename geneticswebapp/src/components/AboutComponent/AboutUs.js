@@ -17,56 +17,59 @@ export default function AboutUs() {
     AOS.init();
   }, []);
   return (
-    <div className="AboutUsComponent">
-      <div className="container">
-        <div className="row AboutUsRowOne ">
-          <div
-            className="col-lg-6 col-md-6 text-center"
-            data-aos="zoom-out"
-            data-aos-offset="200"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="1000"
-          >
-            <img src={Logo} />
+    <section id="about">
+      <div className="AboutUsComponent">
+        <div className="container">
+          <div className="row AboutUsRowOne ">
+            <div
+              className="col-lg-6 col-md-6 text-center"
+              data-aos="zoom-out"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="1000"
+            >
+              <img src={Logo} />
+            </div>
+            <div
+              className="col-lg-6 col-md-6 text-center"
+              className="col-lg-6 col-md-6 text-center"
+              data-aos="fade-left"
+              data-aos="zoom-out"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="1000"
+            >
+              <h3 className=" text-center">WHO WE ARE</h3>
+              <hr className="HrBreaker" />
+              <p className=" text-center">
+                The Genetics Society of Sri Jayewardenepura University is an
+                academic association among the University undergraduates under
+                the Applied Science Stream. It was founded by Prof. B.G.D.N. K
+                de Silva in 2010, with the objective to develop the knowledge on
+                genetics among school and University students in Sri Lanka. It
+                is one of the first few learned societies devoted to genetics.
+                The committee is managed by senior undergraduates of the
+                University and the membership of the society is shared among the
+                University undergraduates, research students and University
+                academics.
+              </p>
+            </div>
           </div>
-          <div
-            className="col-lg-6 col-md-6 text-center"
-            className="col-lg-6 col-md-6 text-center"
-            data-aos="fade-left"
-            data-aos="zoom-out"
-            data-aos-offset="200"
-            data-aos-easing="ease-in-sine"
-            data-aos-duration="1000"
-          >
-            <h3 className=" text-center">WHO WE ARE</h3>
-            <hr className="HrBreaker" />
-            <p className=" text-center">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English. Many desktop
-              publishing packages and web page editors now use Lorem Ipsum as
-              their default model text, and a search for 'lorem ipsum' will
-              uncover many web sites still in their infancy. Various versions
-              have evolved
-            </p>
-          </div>
-        </div>
 
-        <div className="AboutUsComponent">
-          <CommetteMember />
-        </div>
-
-        <div className="AboutUsComponent ">
-          <div className="LecComponentDesktop ">
-            <Particle />
+          <div className="AboutUsComponent">
+            <CommetteMember />
           </div>
-          <div className="LecComponentMobile ">
-            <LecturersMobileComponent />
+
+          <div className="AboutUsComponent ">
+            <div className="LecComponentDesktop ">
+              <Particle />
+            </div>
+            <div className="LecComponentMobile ">
+              <LecturersMobileComponent />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
