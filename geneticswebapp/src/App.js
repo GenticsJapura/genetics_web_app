@@ -7,6 +7,8 @@ import Header from "./components/Header";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import AboutUs from "./components/AboutComponent/AboutUs";
 import Contactsection from "./components/ContactComponent/ConatctUs";
+// import  CarouselDemo from "./components/carousel"
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -102,6 +104,7 @@ function App() {
           />
             <Navbar />
             <Header />
+            {/* <CarouselDemo /> */}
           <Route path="/" exact>
            
             <AboutUs />
@@ -111,6 +114,7 @@ function App() {
           </Route>
 
           <Route path="/about" exact component={AboutUs} />
+          <Footer />
           {/* <Route path="/contact" exact component={Contactsection} /> */}
         </div>
       </Router>
