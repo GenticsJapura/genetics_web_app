@@ -104,6 +104,7 @@ function App() {
           <Navbar />
           <Header />
           <Route path="/" exact>
+            <SocietyInfo />
             <AboutUs />
             <section>
               <Contactsection></Contactsection>
