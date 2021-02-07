@@ -210,7 +210,15 @@ nav ul li {
 }
 
 .footerLink:hover {
-  color: gold;
+  color: rgb(240, 176, 0);
+}
+
+.socialIcon {
+  color: white;
+}
+
+.socialIcon:hover {
+  color: rgb(240, 176, 0);
 }
 
 @media screen and (max-width: 400px) {

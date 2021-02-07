@@ -54,16 +54,16 @@ function Footer() {
                 <i className="fa fa-google-plus" />
               </a>
               <a className="btn btn-social-icon btn-facebook" href="">
-                <i class="fab fa-facebook-square fa-3x"></i>
+                <i class="fab fa-facebook-square fa-2x socialIcon socialIconFacebook"></i>
               </a>
               <a className="btn btn-social-icon btn-linkedin" href="">
-                <i class="fab fa-linkedin fa-3x"></i>
+                <i class="fab fa-linkedin fa-2x socialIcon socialIconLinkedin"></i>
               </a>
               <a className="btn btn-social-icon btn-twitter" href="">
-                <i class="fab fa-twitter fa-3x"></i>
+                <i class="fab fa-twitter fa-2x socialIcon socialIconTwitter"></i>
               </a>
               <a className="btn btn-social-icon btn-google" href="">
-                <i className="fa fa-youtube" />
+                <i className="fa fa-youtube socialIcon" />
               </a>
               <a className="btn btn-social-icon" href="mailto:">
                 <i className="fa fa-envelope-o" />
