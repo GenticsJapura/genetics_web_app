@@ -1,11 +1,15 @@
-import React from "react";
+import React,{useState} from "react";
 // import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import emailjs from "emailjs-com";
 import { init } from "emailjs-com";
- 
+
+
+
 export default function Contactsection() {
+
+ 
   init("user_17nXRu6uDfNlxC194GMjM");
   function sendEmail(e) {
     e.preventDefault();
@@ -29,7 +33,13 @@ export default function Contactsection() {
     e.target.reset();
   }
 
+  const handleSubmit=()=>{
+
+  }
+
   return (
+    
+
     <div
     data-aos="fade-down"
     data-aos-easing="linear"
@@ -55,7 +65,9 @@ export default function Contactsection() {
                 name="name"
                 required
                 style={{ width: "80%", fontSize: "15px" }}
+              
               />
+               
 
               <TextField
                 id="outlined-basic"
@@ -66,6 +78,7 @@ export default function Contactsection() {
                 variant="outlined"
                 required
                 style={{ width: "80%", margin: "15px", fontSize: "15px" }}
+               
               />
                 <TextField
                 id="outlined-basic"
@@ -75,6 +88,7 @@ export default function Contactsection() {
                 variant="outlined"
                 required
                 style={{ width: "80%", margin: "15px", fontSize: "15px" }}
+               
               />
 
               <TextField
