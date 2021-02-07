@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 function Footer() {
   return (
     <div className="footer">
@@ -11,17 +10,20 @@ function Footer() {
             <h5>Links</h5>
             <ul className="list-unstyled">
               <li>
-              <a class="nav-link js-scroll-trigger" href="#home">
+                <a class="nav-link js-scroll-trigger footerLink" href="#home">
                   Home <span className="sr-only">(current)</span>
                 </a>
               </li>
               <li>
-              <a class="nav-link js-scroll-trigger" href="#about">
+                <a class="nav-link js-scroll-trigger footerLink" href="#about">
                   About us
                 </a>
               </li>
               <li>
-              <a class="nav-link js-scroll-trigger" href="#contact">
+                <a
+                  class="nav-link js-scroll-trigger footerLink"
+                  href="#contact"
+                >
                   Contact us
                 </a>
               </li>
@@ -30,50 +32,37 @@ function Footer() {
           <div className="col-7 col-sm-5">
             <h5>Our Address</h5>
             <address>
-                University of Sri jayewardenepura
+              University of Sri jayewardenepura
               <br />
-                Gangodawila, Nugegoda
+              Gangodawila, Nugegoda
               <br />
-                Sri Lanka
+              Sri Lanka
               <br />
               <i className="fa fa-phone fa-lg" />: +94 701853727
               <br />
               <i className="fa fa-fax fa-lg" />: +94 741139521
               <br />
               <i className="fa fa-envelope fa-lg" />:{" "}
-              <a href="mailto:confusion@food.net">usjgmbsociety@gmail.com</a>
+              <a href="mailto:confusion@food.net" className="footerLink">
+                usjgmbsociety@gmail.com
+              </a>
             </address>
           </div>
           <div className="col-12 col-sm-4 align-self-center">
             <div className="text-center">
-              <a
-                className="btn btn-social-icon btn-google"
-                href=""
-              >
+              <a className="btn btn-social-icon btn-google" href="">
                 <i className="fa fa-google-plus" />
               </a>
-              <a
-                 className="btn btn-social-icon btn-facebook"
-                href=""
-              >
-              <i class="fab fa-facebook-square fa-3x"></i>
+              <a className="btn btn-social-icon btn-facebook" href="">
+                <i class="fab fa-facebook-square fa-3x"></i>
               </a>
-              <a
-                className="btn btn-social-icon btn-linkedin"
-                href=""
-              >
+              <a className="btn btn-social-icon btn-linkedin" href="">
                 <i class="fab fa-linkedin fa-3x"></i>
               </a>
-              <a
-                className="btn btn-social-icon btn-twitter"
-                href=""
-              >
+              <a className="btn btn-social-icon btn-twitter" href="">
                 <i class="fab fa-twitter fa-3x"></i>
               </a>
-              <a
-                className="btn btn-social-icon btn-google"
-                href=""
-              >
+              <a className="btn btn-social-icon btn-google" href="">
                 <i className="fa fa-youtube" />
               </a>
               <a className="btn btn-social-icon" href="mailto:">
@@ -82,9 +71,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="row justify-content-center">
-          
-        </div>
+        <div className="row justify-content-center"></div>
       </div>
     </div>
   );
