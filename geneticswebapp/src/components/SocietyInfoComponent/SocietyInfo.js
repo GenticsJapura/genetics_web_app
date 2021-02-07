@@ -16,7 +16,7 @@ export default function SocietyInfo() {
             <div className="col-lg-12 col-sm-12 text-center homepagefontawesometext">
               <p>Members</p>
               <span className="countDownText">
-                <CountUp start={0} end={10} duration={10} separator=" " />
+                <CountUp start={0} end={10} duration={10} separator=" " /> +
               </span>
             </div>
           </div>
@@ -32,7 +32,7 @@ export default function SocietyInfo() {
             <div className="col-lg-12 col-sm-12 text-center homepagefontawesometext">
               <p>Lectures</p>
               <span className="countDownText">
-                <CountUp start={0} end={10} duration={10} separator=" " />
+                <CountUp start={0} end={10} duration={10} separator=" " /> +
               </span>
             </div>
           </div>
@@ -48,7 +48,7 @@ export default function SocietyInfo() {
             <div className="col-lg-12 col-sm-12 text-center homepagefontawesometext">
               <p>Articles</p>
               <span className="countDownText">
-                <CountUp start={0} end={10} duration={10} separator=" " />
+                <CountUp start={0} end={10} duration={10} separator=" " /> +
               </span>
             </div>
           </div>

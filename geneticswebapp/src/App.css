@@ -17,7 +17,6 @@ body {
 /***********************NAVBAR*************************/
 
 nav {
- 
   overflow: hidden;
 }
 
@@ -87,14 +86,12 @@ nav ul li {
 
 /************************HEADER************************/
 .header-wraper {
- 
   height: 100vh;
- 
 }
 
-.bg-img{
+.bg-img {
   position: relative;
-  background-image: url(./img/banner.png); 
+  background-image: url(./img/banner.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -134,19 +131,18 @@ nav ul li {
 }
 
 /*contacy us button*/
-.btn-main-contact{
+.btn-main-contact {
   border: 1px solid #fff;
   padding: 10px 30px;
   color: #fff;
   text-decoration: none;
   transition: 0.6s ease;
-  
 }
 
-.btn-main-contact:hover{
-    background-color: #fff ;
-    color: black ;
-    cursor: pointer;
+.btn-main-contact:hover {
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
 }
 
 /*************particles******************/
@@ -183,8 +179,8 @@ nav ul li {
 }
 
 /**********************footer******************/
-.footer{
-  background-image: linear-gradient(
+.footer {
+  /* background-image: linear-gradient(
     to right bottom,
     #0044a6,
     #0044ab,
@@ -198,9 +194,39 @@ nav ul li {
     #2f88e9,
     #479cf3,
     #5faffb
-  ); 
+  ); */
+
+  background-image: url("./img/footer.png");
+  background-size: cover;
 
   margin: 0px auto;
   padding: 20px 0px 20px 0px;
+  padding-top: 8%;
+  color: white;
 }
 
+.footerLink {
+  color: white;
+}
+
+.footerLink:hover {
+  color: rgb(240, 176, 0);
+}
+
+.socialIcon {
+  color: white;
+}
+
+.socialIcon:hover {
+  color: rgb(240, 176, 0);
+}
+
+@media screen and (max-width: 400px) {
+  .footer {
+    background-image: url("./img/footer.png");
+    background-size: cover;
+    margin: 0px auto;
+    padding: 20px 0px 20px 0px;
+    padding-top: 20%;
+  }
+}
