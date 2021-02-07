@@ -9,7 +9,7 @@ const Header = () => {
             <h1>GEMSOC</h1>
             <Typed
               className="typed-text"
-              strings={["Genetics", "Biology", "USJ"]}
+              strings={["Genetics", "Molecular", "Biology","society","Univerity of Sri jayewardenepura"]}
               typeSpeed={40}
               backSpeed={60}
               loop

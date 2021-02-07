@@ -35,6 +35,8 @@ export default function Contactsection() {
  
 
   return (
+    
+
     <div
       data-aos="fade-down"
       data-aos-easing="linear"
@@ -62,7 +64,9 @@ export default function Contactsection() {
                 name="name"
                 required={true}
                 style={{ width: "80%", fontSize: "15px" }}
+              
               />
+               
 
               <TextField
                 id="outlined-basic"
@@ -73,6 +77,7 @@ export default function Contactsection() {
                 variant="outlined"
                 required={true}
                 style={{ width: "80%", margin: "15px", fontSize: "15px" }}
+               
               />
              
               <TextField
@@ -83,6 +88,7 @@ export default function Contactsection() {
                 variant="outlined"
                 required={true}
                 style={{ width: "80%", margin: "15px", fontSize: "15px" }}
+               
               />
 
               <TextField

@@ -8,7 +8,7 @@ import Logo from "./img/logoWhite.png";
 import "./aboutus.css";
 import "../../App.css";
 
-import CommetteMember from "./CommetteMember";
+import CommetteMember from "./CommetteMemberNew";
 import LecturersComponent from "./Lecturers";
 import LecturersMobileComponent from "./LecturersMobile";
 import Particle from "./particle";
