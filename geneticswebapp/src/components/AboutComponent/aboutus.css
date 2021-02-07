@@ -44,7 +44,7 @@
     #006bb7,
     #067fc9
   );
-  padding: 5px;
+  padding: 5px 7px;
   border-radius: 40px;
   color: aliceblue;
   font-weight: bold;
@@ -97,6 +97,14 @@
   -webkit-box-shadow: 0px 0px 19px 6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 19px 6px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 19px 6px rgba(0, 0, 0, 0.75);
+
+  transition-timing-function: ease-in-out;
+  transition: 1s;
+}
+
+.MemberImage:hover {
+  transform: scale(1.08);
+  cursor: pointer;
 }
 
 /* On screens that are 600px or less, set the background color to olive */
