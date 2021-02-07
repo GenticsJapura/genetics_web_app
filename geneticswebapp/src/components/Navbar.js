@@ -20,6 +20,7 @@ const Navbar = () => {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            style={{ border: "0px" }}
           >
             <FontAwesomeIcon icon={faBars} style={{ color: "#fff" }} />
           </button>
