@@ -12,16 +12,14 @@ const Header = () => {
               className="typed-text"
               strings={[
                 "Genetics",
-                "Molecular",
-                "Biology",
-                "society",
+                "Molecular Biology society",
                 "Univerity of Sri jayewardenepura",
               ]}
               typeSpeed={40}
               backSpeed={60}
               loop
             />
-            <a href="#" className="btn-main-contact">
+            <a href="#" className="btn btn-dark">
               Contact us
             </a>
           </div>
