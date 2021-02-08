@@ -13,8 +13,8 @@ const router = express.Router();
 
 // Routes restricted with authetication (JWT Token)
 router.post("/", auth, addArticle);
-router.get("/", auth, getAllArticles);
-router.get("/:id", auth, getArticle);
+router.get("/", getAllArticles);
+router.get("/:id", getArticle);
 router.put("/:id", auth, updateArticle);
 router.delete("/:id", auth, deleteArticle);
 
