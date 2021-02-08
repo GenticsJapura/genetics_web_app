@@ -90,7 +90,7 @@ const getMember = async (req, res, next) => {
 //Update Member Function
 const updateMember = async (req, res, next) => {
   try {
-    const id = req.user.id; //get user id from the json web token
+    const id = req.params.id; //get user id from the json web token
     if (!req.body.password) {
       let { userName, fullName, email, contactNo, userImage } = req.body;
 
