@@ -70,7 +70,10 @@ const getAuthMemberDetails = async (req, res) => {
     if (data.empty) {
       res.status(404).send("No Member Record Found");
     } else {
-      res.send(data.data());
+      const fullName = data.data().fullName;
+      const memberID = id;
+      const userObj = { memberID, fullName };
+      res.send(userObj);
     }
   } catch (error) {
     res.status(400).send(error.message);
