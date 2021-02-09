@@ -12,10 +12,12 @@ import Footer from "./components/Footer";
 import SocietyInfo from "./components/SocietyInfoComponent/SocietyInfo";
 import Articles from "./components/ArticleComponent/Articles";
 import MemberLogin from "./components/MemberComponent/MemberLoginComponent/MemberLogin";
-
+import SingleArticle from "./components/ArticleComponent/SingleArticle";
+import AddArticle from "./components/MemberComponent/MemberArticleComponent/AddArticle";
 function App() {
   return (
     <React.Fragment>
+      <Navbar />
       <Router>
         <div>
           <Route path="/" exact>
@@ -115,15 +117,15 @@ function App() {
             <Footer />
           </Route>
           <Route path="/articles" exact>
-            <Navbar />
             <Articles />
             <Footer />
           </Route>
           <Route path="/login" exact>
-            <Navbar />
             <MemberLogin />
           </Route>
-          <Route path="/about" exact component={AboutUs} />
+
+          <Route path="/article" exact component={SingleArticle} />
+          <Route path="/user" exact component={AddArticle} />
         </div>
       </Router>
     </React.Fragment>
