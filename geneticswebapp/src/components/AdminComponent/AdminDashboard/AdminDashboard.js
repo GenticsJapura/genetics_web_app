@@ -32,7 +32,7 @@ export default function AdminDashboard() {
             </div>
             <br /> <br />
             <div className="col-lg-12 text-center">
-              <p>senurajayade@gmail.com</p>
+              <p>senurajayadeva@gmail.com</p>
             </div>
           </div>
         </div>
