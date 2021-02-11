@@ -35,9 +35,8 @@ export default function AdminDashboard() {
               />
             </div>
             <br /> <br />
-            <div className="col-lg-12 text-center ">
-              <p>senurajayadeva@gmail.com</p>
-              <button className="btn btn-danger">LOGOUT</button>
+            <div className="col-lg-12 text-center">
+              <p>senurajayade@gmail.com</p>
             </div>
           </div>
         </div>
