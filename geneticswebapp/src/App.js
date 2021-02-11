@@ -19,7 +19,6 @@ import AdminDashboard from "./components/AdminComponent/AdminDashboard/AdminDash
 import MemberDashboard from "./components/MemberComponent/MemberDashboardComponent/ArticleScreens/DashboardHome";
 import EditArticle from "./components/MemberComponent/MemberDashboardComponent/ArticleScreens/EditArticle"
 
-
 function App() {
   return (
     <React.Fragment>
@@ -144,6 +143,7 @@ function App() {
           <Route path="/addarticle" exact component={AddArticle} />
           <Route path="/member" exact component={MemberDashboard} />
           <Route path="/editarticle" exact component={EditArticle} />
+
         </div>
       </Router>
     </React.Fragment>
