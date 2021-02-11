@@ -6,14 +6,11 @@ import { Link } from "react-router-dom";
 export default function UserArticles(props) {
   const [articleList, setarticleList] = useState([]);
 
-
-
   useEffect(() => {
-   getAllData();
+    getAllData();
   }, []);
 
-
-  function getAllData(){
+  function getAllData() {
     const config = {
       headers: { "x-auth-token": localStorage.getItem("x-auth-token") },
     };
@@ -28,29 +25,6 @@ export default function UserArticles(props) {
       });
   }
 
-
-  function deleteArticle(value) {
-    const config = {
-      headers: {
-        "x-auth-token": localStorage.getItem("x-auth-token"),
-      },
-    };
-
-    axios
-      .delete(
-        process.env.REACT_APP_BACKEND_URL + "/api/article/" + value,
-        config
-      )
-      .then(() => {
-        //re-render again
-        getAllData();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
-
-
   return (
     <div>
       {articleList.length <= 0 ? (
@@ -60,12 +34,14 @@ export default function UserArticles(props) {
           <div>
             {articleList.map((article) => {
               return (
-                <div className="cl-12 col-md-12 ml-1">
+                <div className="cl-12 col-md-12 ml-1 mt-3">
                   <div class="card">
-                    <Link to={{
-                              pathname: `/article`,
-                              data: article.id,
-                            }}>
+                    <Link
+                      to={{
+                        pathname: `/article`,
+                        data: article.id,
+                      }}
+                    >
                       <img
                         src={article.coverImage}
                         class="card-img-top"
@@ -78,7 +54,7 @@ export default function UserArticles(props) {
                       <p class="card-text">{article.description}</p>
                       <div className="row text-center">
                         <div className="col col-md-6 col-sm-6">
-                            <Link
+                          <Link
                             to={{
                               pathname: `/editarticle`,
                               data: article.id,
@@ -89,7 +65,35 @@ export default function UserArticles(props) {
                           </Link>
                         </div>
                         <div className="col col-md-6 col-sm-6">
-                          <button className="btn btn-danger" onClick={deleteArticle(article.id)}>Delete</button>
+                          <button
+                            className="btn btn-danger"
+                            onClick={() => {
+                              const config = {
+                                headers: {
+                                  "x-auth-token": localStorage.getItem(
+                                    "x-auth-token"
+                                  ),
+                                },
+                              };
+
+                              axios
+                                .delete(
+                                  process.env.REACT_APP_BACKEND_URL +
+                                    "/api/article/" +
+                                    article.id,
+                                  config
+                                )
+                                .then(() => {
+                                  //re-render again
+                                  window.location = "/member";
+                                })
+                                .catch((err) => {
+                                  console.log(err);
+                                });
+                            }}
+                          >
+                            Delete
+                          </button>
                         </div>
                       </div>
                     </div>

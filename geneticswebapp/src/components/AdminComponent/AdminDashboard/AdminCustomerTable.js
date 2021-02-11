@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Table from "@material-ui/core/Table";
@@ -10,26 +11,15 @@ import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 
 const columns = [
-  { id: "id", label: "id", minWidth: 170 },
-  { id: "userName", label: "userName", minWidth: 100 },
-  {
-    id: "email",
-    label: "email",
-    minWidth: 170,
-    align: "right",
-  },
+  { id: "id", label: "ID", minWidth: 170 },
+  { id: "userName", label: "UserName", minWidth: 100 },
+  { id: "updateID", label: "", minWidth: 100 },
+  { id: "deleteID", label: "", minWidth: 100 },
 ];
 
-function createData(id, userName, email) {
-  return { id, userName, email };
+function createData(id, userName, updateID, deleteID) {
+  return { id, userName, updateID, deleteID };
 }
-
-const rows = [
-  createData("sdasdasda", "senura", "senurajayadeva@gmail.com"),
-  createData("sdasdasda", "senura", "senurajayadeva@gmail.com"),
-  createData("sdasdasda", "senura", "senurajayadeva@gmail.com"),
-  createData("sdasdasda", "senura", "senurajayadeva@gmail.com"),
-];
 
 const useStyles = makeStyles({
   root: {
@@ -44,6 +34,55 @@ export default function AdminCustomerTable() {
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
+
+  const [memberList, setmemberList] = useState([]);
+
+  useEffect(() => {
+    getAllData();
+  }, []);
+
+  function getAllData() {
+    const config = {
+      headers: {
+        "x-auth-token": localStorage.getItem("x-auth-token"),
+      },
+    };
+    axios
+      .get(process.env.REACT_APP_BACKEND_URL + "/api/member", config)
+      .then((res) => {
+        console.log(res);
+        setmemberList(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  function deleteMember(value) {
+    const config = {
+      headers: {
+        "x-auth-token": localStorage.getItem("x-auth-token"),
+      },
+    };
+
+    axios
+      .delete(
+        process.env.REACT_APP_BACKEND_URL + "/api/member/" + value,
+        config
+      )
+      .then(() => {
+        //re-render again
+        getAllData();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  //map table row data
+  const rows = memberList.map((member) => {
+    return createData(member.id, member.userName, member.id, member.id);
+  });
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -81,9 +120,27 @@ export default function AdminCustomerTable() {
                       const value = row[column.id];
                       return (
                         <TableCell key={column.id} align={column.align}>
-                          {column.format && typeof value === "number"
-                            ? column.format(value)
-                            : value}
+                          {column.id === "deleteID" ? (
+                            <button
+                              className="btn btn-danger btn-sm"
+                              onClick={() => {
+                                deleteMember(value);
+                              }}
+                            >
+                              Remove
+                            </button>
+                          ) : column.id === "updateID" ? (
+                            <button
+                              className="btn btn-warning btn-sm"
+                              // onClick={() => {
+                              //   deleteArticle(value);
+                              // }}
+                            >
+                              EDIT
+                            </button>
+                          ) : (
+                            value
+                          )}
                         </TableCell>
                       );
                     })}

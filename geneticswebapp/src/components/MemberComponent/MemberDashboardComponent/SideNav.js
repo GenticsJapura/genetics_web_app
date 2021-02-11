@@ -1,70 +1,57 @@
 import React from "react";
 import "./dashboard.css";
-
+import { Link } from "react-router-dom";
 export default function SideNav() {
   return (
-    <div class="wrapper">
-      <nav id="sidebar">
-        <div class="sidebar-header">
-          <h3>Bootstrap Sidebar</h3>
+    <div>
+      <div className="row">
+        <div className="col-lg-12 text-center ">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf2j71u2ipMbi4uUIcRaomOvJOSPkvvUPWFA&usqp=CAU"
+            style={{ width: "200px", height: "200px", borderRadius: "50%" }}
+          />
         </div>
-
-        <ul class="list-unstyled components">
-          <p>Dummy Heading</p>
-          <li class="active">
-            <a
-              href="#homeSubmenu"
-              data-toggle="collapse"
-              aria-expanded="false"
-              class="dropdown-toggle"
-            >
-              Home
-            </a>
-            <ul class="collapse list-unstyled" id="homeSubmenu">
-              <li>
-                <a href="#">Home 1</a>
-              </li>
-              <li>
-                <a href="#">Home 2</a>
-              </li>
-              <li>
-                <a href="#">Home 3</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a
-              href="#pageSubmenu"
-              data-toggle="collapse"
-              aria-expanded="false"
-              class="dropdown-toggle"
-            >
-              Pages
-            </a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-              <li>
-                <a href="#">Page 1</a>
-              </li>
-              <li>
-                <a href="#">Page 2</a>
-              </li>
-              <li>
-                <a href="#">Page 3</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Portfolio</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
-   
+        <br /> <br />
+        <div className="col-lg-12 text-center">
+          <p>senurajayade@gmail.com</p>
+          <button
+            className="btn btn-danger"
+            onClick={() => {
+              localStorage.removeItem("x-auth-token");
+              localStorage.removeItem("role");
+              window.location = "/";
+            }}
+          >
+            LOGOUT
+          </button>
+          <div className="justify-center">
+            <center>
+              {" "}
+              <Link
+                to={{
+                  pathname: "/member",
+                }}
+                class="btn btn-success mt-4"
+              >
+                Dashboard
+              </Link>
+            </center>
+          </div>
+          <div className="justify-center">
+            <center>
+              {" "}
+              <Link
+                to={{
+                  pathname: "/addarticle",
+                }}
+                class="btn btn-warning mt-4"
+              >
+                Add Article
+              </Link>
+            </center>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

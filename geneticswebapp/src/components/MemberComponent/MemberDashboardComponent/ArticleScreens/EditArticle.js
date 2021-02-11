@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReactQuill from "react-quill";
 
+import SideNav from "../SideNav";
+
 import { storage } from "../../../../firebase";
 import Progress from "./Progress";
 import "./AddArticle.css";
@@ -15,12 +17,15 @@ export default function EditArticle(props) {
   const [description, setdescription] = useState();
   const [text, settext] = useState("Write something");
   const [coverImage, setcoverImage] = useState(UploadImage);
-  const [articleId,setArticleId] =useState();
+  const [articleId, setArticleId] = useState();
 
   const [uploadPercentage, setuploadPercentage] = useState(0);
   const [imageUploadingState, setimageUploadingState] = useState("");
 
   useEffect(() => {
+    if (!props.location.data) {
+      window.location = "/member";
+    }
     const config = {
       headers: {
         "x-auth-token": localStorage.getItem("x-auth-token"),
@@ -28,7 +33,12 @@ export default function EditArticle(props) {
     };
 
     axios
-      .get(process.env.REACT_APP_BACKEND_URL + "/api/article/"+props.location.data, config)
+      .get(
+        process.env.REACT_APP_BACKEND_URL +
+          "/api/article/" +
+          props.location.data,
+        config
+      )
       .then((res) => {
         setmemberID(res.data.memberID);
         setmemberName(res.data.memberName);
@@ -36,7 +46,7 @@ export default function EditArticle(props) {
         setdescription(res.data.description);
         settext(res.data.text);
         setcoverImage(res.data.coverImage);
-        setArticleId(res.data.id);
+        setArticleId(props.location.data);
       })
       .catch((err) => {
         console.log(err);
@@ -117,67 +127,81 @@ export default function EditArticle(props) {
       coverImage,
     };
 
-    console.log(config);
-    console.log(newArticle);
     axios
-      .post(
-        process.env.REACT_APP_BACKEND_URL + "/api/article/"+articleId,
+      .put(
+        process.env.REACT_APP_BACKEND_URL + "/api/article/" + articleId,
         newArticle,
         config
       )
       .then(() => {
-        alert("Article Added");
+        alert("Article Updated");
+        window.location = "/member";
       })
       .catch((err) => {
-        console.log(err);
+        alert("Error");
+        window.location = "/member";
       });
   }
 
   return (
     <div className="container">
-      <div className="AddArticleComponent">
-        <div class="form-group">
-          <label>Title</label>
-          <input
-            type="text"
-            class="form-control"
-            value={title}
-            onChange={(e) => {
-              settitle(e.target.value);
-            }}
-          />
+      <div className="row">
+        <div className="col-md-2">
+          <SideNav />
         </div>
-        <div class="form-group">
-          <label>Description</label>
-          <input
-            type="text"
-            class="form-control"
-            value={description}
-            onChange={(e) => {
-              setdescription(e.target.value);
-            }}
-          />
-        </div>
-        <div class="form-group">
-          <img src={coverImage} style={{ width: "200px", height: "200px" }} />
-          {imageUploadingState}
-          <input type="file" onChange={autoUploadImage} class="form-control" />
-        </div>
-        <div class="form-group">
-          {uploadPercentage} %
-          <Progress percentage={uploadPercentage} />
-        </div>
-        <div class="form-group">
-          <ReactQuill
-            modules={AddArticle.modules}
-            value={text}
-            onChange={(value) => {
-              settext(value);
-            }}
-          />
-        </div>
-        <div className="btn btn-success" onClick={AddArticle}>
-          Submit
+        <div className="col-md-10">
+          <div className="AddArticleComponent">
+            <div class="form-group">
+              <label>Title</label>
+              <input
+                type="text"
+                class="form-control"
+                value={title}
+                onChange={(e) => {
+                  settitle(e.target.value);
+                }}
+              />
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <input
+                type="text"
+                class="form-control"
+                value={description}
+                onChange={(e) => {
+                  setdescription(e.target.value);
+                }}
+              />
+            </div>
+            <div class="form-group">
+              <img
+                src={coverImage}
+                style={{ width: "200px", height: "200px" }}
+              />
+              {imageUploadingState}
+              <input
+                type="file"
+                onChange={autoUploadImage}
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              {uploadPercentage} %
+              <Progress percentage={uploadPercentage} />
+            </div>
+            <div class="form-group">
+              <ReactQuill
+                modules={AddArticle.modules}
+                value={text}
+                onChange={(value) => {
+                  settext(value);
+                }}
+              />
+            </div>
+            <div className="btn btn-success" onClick={AddArticle}>
+              Submit
+            </div>
+          </div>
         </div>
       </div>
     </div>
