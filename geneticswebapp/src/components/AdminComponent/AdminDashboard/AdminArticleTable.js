@@ -11,20 +11,14 @@ import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 
 const columns = [
-  { id: "id", label: "id", minWidth: 170 },
-  { id: "title", label: "title", minWidth: 100 },
+  { id: "id", label: "ID", minWidth: 170 },
+  { id: "title", label: "Title", minWidth: 100 },
+  { id: "deleteID", label: "", minWidth: 100 },
 ];
 
-function createData(id, title) {
-  return { id, title };
+function createData(id, title, deleteID) {
+  return { id, title, deleteID };
 }
-
-const rows = [
-  createData("sdasdasda", "senura"),
-  createData("sdasdasda", "senura"),
-  createData("sdasdasda", "senura"),
-  createData("sdasdasda", "senura"),
-];
 
 const useStyles = makeStyles({
   root: {
@@ -43,6 +37,10 @@ export default function AdminArticleTable() {
   const [articleList, setarticleList] = useState([]);
 
   useEffect(() => {
+    getAllData();
+  }, []);
+
+  function getAllData() {
     axios
       .get(process.env.REACT_APP_BACKEND_URL + "/api/article")
       .then((res) => {
@@ -52,7 +50,33 @@ export default function AdminArticleTable() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }
+
+  //map table row data
+  const rows = articleList.map((article) => {
+    return createData(article.id, article.title, article.id);
+  });
+
+  function deleteArticle(value) {
+    const config = {
+      headers: {
+        "x-auth-token": localStorage.getItem("x-auth-token"),
+      },
+    };
+
+    axios
+      .delete(
+        process.env.REACT_APP_BACKEND_URL + "/api/article/" + value,
+        config
+      )
+      .then(() => {
+        //re-render again
+        getAllData();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -90,9 +114,18 @@ export default function AdminArticleTable() {
                       const value = row[column.id];
                       return (
                         <TableCell key={column.id} align={column.align}>
-                          {column.format && typeof value === "number"
-                            ? column.format(value)
-                            : value}
+                          {column.id === "deleteID" ? (
+                            <button
+                              className="btn btn-danger btn-sm"
+                              onClick={() => {
+                                deleteArticle(value);
+                              }}
+                            >
+                              Remove
+                            </button>
+                          ) : (
+                            value
+                          )}
                         </TableCell>
                       );
                     })}
