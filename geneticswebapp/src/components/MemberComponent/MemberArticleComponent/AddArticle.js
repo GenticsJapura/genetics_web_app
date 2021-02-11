@@ -8,6 +8,8 @@ import "./AddArticle.css";
 
 import UploadImage from "./img/upload.jpg";
 
+import SideNav from "../MemberDashboardComponent/SideNav";
+
 export default function AddArticle() {
   const [memberID, setmemberID] = useState();
   const [memberName, setmemberName] = useState();
@@ -121,57 +123,78 @@ export default function AddArticle() {
       )
       .then(() => {
         alert("Article Added");
+        window.location = "/member";
       })
       .catch((err) => {
-        console.log(err);
+        alert("Error..Try Again");
+        window.location = "/member";
       });
   }
 
   return (
     <div className="container">
-      <div className="AddArticleComponent">
-        <div class="form-group">
-          <label>Title</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Enter Title"
-            onChange={(e) => {
-              settitle(e.target.value);
-            }}
-          />
+      <div className="row">
+        <div className="col-md-2">
+          <SideNav />
         </div>
-        <div class="form-group">
-          <label>Description</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Enter Description"
-            onChange={(e) => {
-              setdescription(e.target.value);
-            }}
-          />
-        </div>
-        <div class="form-group">
-          <img src={coverImage} style={{ width: "200px", height: "200px" }} />
-          {imageUploadingState}
-          <input type="file" onChange={autoUploadImage} class="form-control" />
-        </div>
-        <div class="form-group">
-          {uploadPercentage} %
-          <Progress percentage={uploadPercentage} />
-        </div>
-        <div class="form-group">
-          <ReactQuill
-            modules={AddArticle.modules}
-            value={text}
-            onChange={(value) => {
-              settext(value);
-            }}
-          />
-        </div>
-        <div className="btn btn-success" onClick={AddArticle}>
-          Submit
+        <div className="col-md-10">
+          {" "}
+          <div className="AddArticleComponent">
+            <div class="form-group">
+              <label>Title</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Title"
+                onChange={(e) => {
+                  settitle(e.target.value);
+                }}
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Description"
+                onChange={(e) => {
+                  setdescription(e.target.value);
+                }}
+                required
+              />
+            </div>
+            <div class="form-group">
+              <img
+                src={coverImage}
+                style={{ width: "200px", height: "200px" }}
+              />
+              {imageUploadingState}
+              <input
+                type="file"
+                onChange={autoUploadImage}
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="form-group">
+              {uploadPercentage} %
+              <Progress percentage={uploadPercentage} />
+            </div>
+            <div class="form-group">
+              <ReactQuill
+                modules={AddArticle.modules}
+                value={text}
+                onChange={(value) => {
+                  settext(value);
+                }}
+                required
+              />
+            </div>
+            <div className="btn btn-success" onClick={AddArticle}>
+              Submit
+            </div>
+          </div>
         </div>
       </div>
     </div>
