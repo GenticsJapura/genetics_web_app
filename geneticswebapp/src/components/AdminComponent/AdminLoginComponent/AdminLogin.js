@@ -25,6 +25,7 @@ export default function AdminLogin() {
         setloginStatusColor("alert-success");
         setloginStatus("Login Successful");
         localStorage.setItem("x-auth-token", res.data.token);
+        localStorage.setItem("role", "Admin");
         window.location = "/admin";
       })
       .catch((err) => {

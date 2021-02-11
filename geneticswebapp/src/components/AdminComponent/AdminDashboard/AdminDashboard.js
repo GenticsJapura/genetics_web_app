@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -23,6 +23,15 @@ const useStyles = makeStyles({
 export default function AdminDashboard() {
   const classes = useStyles();
 
+  useEffect(() => {
+    if (
+      !localStorage.getItem("x-auth-token") &&
+      localStorage.getItem("role") !== "Admin"
+    ) {
+      window.location = "/";
+    }
+  }, []);
+
   return (
     <div className="container">
       <div className="row mt-5">
@@ -37,6 +46,15 @@ export default function AdminDashboard() {
             <br /> <br />
             <div className="col-lg-12 text-center">
               <p>senurajayade@gmail.com</p>
+              <button
+                className="btn btn-danger"
+                onClick={() => {
+                  localStorage.removeItem("x-auth-token");
+                  window.location = "/";
+                }}
+              >
+                LOGOUT
+              </button>
             </div>
           </div>
         </div>
@@ -48,7 +66,7 @@ export default function AdminDashboard() {
               <h3 className="text-center">Member Table</h3>
               <AdminCustomerTable />
             </div>
-            <div className="col-lg-12 col-sm-12 admindashboardCol">
+            <div className="col-lg-12 col-sm-12 admindashboardCol mt-5">
               {" "}
               <h3 className="text-center">Article Table</h3>
               <AdminArticleTable />
