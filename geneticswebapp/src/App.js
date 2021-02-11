@@ -16,6 +16,9 @@ import SingleArticle from "./components/ArticleComponent/SingleArticle";
 import AddArticle from "./components/MemberComponent/MemberArticleComponent/AddArticle";
 import AdminLogin from "./components/AdminComponent/AdminLoginComponent/AdminLogin";
 import AdminDashboard from "./components/AdminComponent/AdminDashboard/AdminDashboard";
+import MemberDashboard from "./components/MemberComponent/MemberDashboardComponent/ArticleScreens/DashboardHome";
+import EditArticle from "./components/MemberComponent/MemberDashboardComponent/ArticleScreens/EditArticle"
+
 function App() {
   return (
     <React.Fragment>
@@ -137,7 +140,10 @@ function App() {
           </Route>
 
           <Route path="/article" exact component={SingleArticle} />
-          <Route path="/user" exact component={AddArticle} />
+          <Route path="/addarticle" exact component={AddArticle} />
+          <Route path="/member" exact component={MemberDashboard} />
+          <Route path="/editarticle" exact component={EditArticle} />
+
         </div>
       </Router>
     </React.Fragment>

@@ -26,7 +26,8 @@ export default function MemberLogin() {
         setloginStatus("Login Successful");
         localStorage.setItem("x-auth-token", res.data.token);
         localStorage.setItem("role", "Member");
-        window.location = "/user";
+        window.location = "/member";
+
       })
       .catch((err) => {
         setloginStatusColor("alert-danger");
