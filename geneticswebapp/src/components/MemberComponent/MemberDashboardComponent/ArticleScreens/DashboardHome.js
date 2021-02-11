@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../dashboard.css";
 import Articles from "./UserArticles";
 
 import SideNav from "../SideNav";
 
 export default function Dashboard() {
+  useEffect(() => {
+    if (
+      !localStorage.getItem("x-auth-token") &&
+      localStorage.getItem("role") !== "Member"
+    ) {
+      window.location = "/";
+    }
+  }, []);
+
   return (
     <div className="container">
       <div className="row mt-5">

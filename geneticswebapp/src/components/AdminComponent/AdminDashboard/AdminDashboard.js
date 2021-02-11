@@ -41,6 +41,7 @@ export default function AdminDashboard() {
                 className="btn btn-danger"
                 onClick={() => {
                   localStorage.removeItem("x-auth-token");
+                  localStorage.removeItem("role");
                   window.location = "/";
                 }}
               >
