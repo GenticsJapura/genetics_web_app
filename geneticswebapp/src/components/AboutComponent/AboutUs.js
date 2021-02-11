@@ -12,6 +12,7 @@ import CommetteMember from "./CommetteMemberNew";
 import LecturersComponent from "./Lecturers";
 import LecturersMobileComponent from "./LecturersMobile";
 import Particle from "./particle";
+import MainCommette from "./MainCommette";
 export default function AboutUs() {
   useEffect(() => {
     AOS.init();
@@ -57,7 +58,7 @@ export default function AboutUs() {
           </div>
 
           <div className="AboutUsComponent">
-            <CommetteMember />
+            <MainCommette />
           </div>
 
           <div className="AboutUsComponent ">
