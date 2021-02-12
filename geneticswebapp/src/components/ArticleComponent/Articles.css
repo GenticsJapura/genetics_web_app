@@ -27,3 +27,13 @@
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
+#SingleArticleCoverImage {
+  width: 700px;
+}
+
+@media screen and (max-width: 400px) {
+  #SingleArticleCoverImage {
+    width: 300px;
+  }
+}
