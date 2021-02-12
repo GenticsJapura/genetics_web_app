@@ -3,6 +3,7 @@ import React from "react";
 import Particles from "react-particles-js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
+import NavbarTwo from "./components/NavbarTwo";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import AboutUs from "./components/AboutComponent/AboutUs";
@@ -16,6 +17,10 @@ import SingleArticle from "./components/ArticleComponent/SingleArticle";
 import AddArticle from "./components/MemberComponent/MemberArticleComponent/AddArticle";
 import AdminLogin from "./components/AdminComponent/AdminLoginComponent/AdminLogin";
 import AdminDashboard from "./components/AdminComponent/AdminDashboard/AdminDashboard";
+import MemberDashboard from "./components/MemberComponent/MemberDashboardComponent/ArticleScreens/DashboardHome";
+import EditArticle from "./components/MemberComponent/MemberDashboardComponent/ArticleScreens/EditArticle";
+import AdminAddMember from "./components/AdminComponent/AdminDashboard/AdminAddMember";
+import AdminEditMember from "./components/AdminComponent/AdminDashboard/AdminEditMember";
 function App() {
   return (
     <React.Fragment>
@@ -118,17 +123,17 @@ function App() {
             <Footer />
           </Route>
           <Route path="/articles" exact>
-            <Navbar />
+            <NavbarTwo />
             <Articles />
             <Footer />
           </Route>
           <Route path="/login" exact>
-            <Navbar />
+            <NavbarTwo />
             <MemberLogin />
           </Route>
 
           <Route path="/adminlogin" exact>
-            <Navbar />
+            <NavbarTwo />
             <AdminLogin />
           </Route>
 
@@ -137,7 +142,11 @@ function App() {
           </Route>
 
           <Route path="/article" exact component={SingleArticle} />
-          <Route path="/user" exact component={AddArticle} />
+          <Route path="/addarticle" exact component={AddArticle} />
+          <Route path="/member" exact component={MemberDashboard} />
+          <Route path="/editarticle" exact component={EditArticle} />
+          <Route path="/addmember" exact component={AdminAddMember} />
+          <Route path="/editmember" exact component={AdminEditMember} />
         </div>
       </Router>
     </React.Fragment>

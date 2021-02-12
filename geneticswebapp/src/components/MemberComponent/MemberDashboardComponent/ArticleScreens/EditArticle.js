@@ -2,26 +2,30 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReactQuill from "react-quill";
 
-import { storage } from "../../../firebase";
+import SideNav from "../SideNav";
+
+import { storage } from "../../../../firebase";
 import Progress from "./Progress";
 import "./AddArticle.css";
 
 import UploadImage from "./img/upload.jpg";
 
-import SideNav from "../MemberDashboardComponent/SideNav";
-
-export default function AddArticle() {
+export default function EditArticle(props) {
   const [memberID, setmemberID] = useState();
   const [memberName, setmemberName] = useState();
   const [title, settitle] = useState();
   const [description, setdescription] = useState();
   const [text, settext] = useState("Write something");
   const [coverImage, setcoverImage] = useState(UploadImage);
+  const [articleId, setArticleId] = useState();
 
   const [uploadPercentage, setuploadPercentage] = useState(0);
   const [imageUploadingState, setimageUploadingState] = useState("");
 
   useEffect(() => {
+    if (!props.location.data) {
+      window.location = "/member";
+    }
     const config = {
       headers: {
         "x-auth-token": localStorage.getItem("x-auth-token"),
@@ -29,10 +33,20 @@ export default function AddArticle() {
     };
 
     axios
-      .get(process.env.REACT_APP_BACKEND_URL + "/api/auth", config)
+      .get(
+        process.env.REACT_APP_BACKEND_URL +
+          "/api/article/" +
+          props.location.data,
+        config
+      )
       .then((res) => {
         setmemberID(res.data.memberID);
-        setmemberName(res.data.fullName);
+        setmemberName(res.data.memberName);
+        settitle(res.data.title);
+        setdescription(res.data.description);
+        settext(res.data.text);
+        setcoverImage(res.data.coverImage);
+        setArticleId(props.location.data);
       })
       .catch((err) => {
         console.log(err);
@@ -113,20 +127,18 @@ export default function AddArticle() {
       coverImage,
     };
 
-    console.log(config);
-    console.log(newArticle);
     axios
-      .post(
-        process.env.REACT_APP_BACKEND_URL + "/api/article",
+      .put(
+        process.env.REACT_APP_BACKEND_URL + "/api/article/" + articleId,
         newArticle,
         config
       )
       .then(() => {
-        alert("Article Added");
+        alert("Article Updated");
         window.location = "/member";
       })
       .catch((err) => {
-        alert("Error..Try Again");
+        alert("Error");
         window.location = "/member";
       });
   }
@@ -138,18 +150,16 @@ export default function AddArticle() {
           <SideNav />
         </div>
         <div className="col-md-10">
-          {" "}
           <div className="AddArticleComponent">
             <div class="form-group">
               <label>Title</label>
               <input
                 type="text"
                 class="form-control"
-                placeholder="Enter Title"
+                value={title}
                 onChange={(e) => {
                   settitle(e.target.value);
                 }}
-                required
               />
             </div>
             <div class="form-group">
@@ -157,11 +167,10 @@ export default function AddArticle() {
               <input
                 type="text"
                 class="form-control"
-                placeholder="Enter Description"
+                value={description}
                 onChange={(e) => {
                   setdescription(e.target.value);
                 }}
-                required
               />
             </div>
             <div class="form-group">
@@ -174,7 +183,6 @@ export default function AddArticle() {
                 type="file"
                 onChange={autoUploadImage}
                 class="form-control"
-                required
               />
             </div>
             <div class="form-group">
@@ -188,7 +196,6 @@ export default function AddArticle() {
                 onChange={(value) => {
                   settext(value);
                 }}
-                required
               />
             </div>
             <div className="btn btn-success" onClick={AddArticle}>

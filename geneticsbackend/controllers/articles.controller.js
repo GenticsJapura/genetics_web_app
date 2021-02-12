@@ -36,6 +36,38 @@ const addArticle = async (req, res) => {
 };
 
 //Get All Articles Function
+const getAllArticlesByMember = async (req, res, next) => {
+  try {
+    const id = req.user.id; //get user id from the json web token
+    const articles = await firestore
+      .collection("articles")
+      .where("memberID", "==", id);
+    const data = await articles.get();
+    const articlesArray = [];
+    if (data.empty) {
+      res.status(404).send("No Aricle Record Found");
+    } else {
+      data.forEach((doc) => {
+        const article = new Article(
+          doc.id,
+          doc.data().memberID,
+          doc.data().memberName,
+          doc.data().title,
+          doc.data().description,
+          doc.data().text,
+          doc.data().coverImage,
+          doc.data().rate
+        );
+        articlesArray.push(article);
+      });
+      res.send(articlesArray);
+    }
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+};
+
+//Get All Articles Function
 const getAllArticles = async (req, res, next) => {
   try {
     const articles = await firestore.collection("articles");
@@ -106,6 +138,7 @@ const deleteArticle = async (req, res, next) => {
 
 module.exports = {
   addArticle,
+  getAllArticlesByMember,
   getAllArticles,
   getArticle,
   updateArticle,
