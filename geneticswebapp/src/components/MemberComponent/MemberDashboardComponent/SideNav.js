@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./dashboard.css";
 import { Link } from "react-router-dom";
 export default function SideNav() {
+  const [name, setname] = useState();
+
+  useEffect(() => {
+    const config = {
+      headers: {
+        "x-auth-token": localStorage.getItem("x-auth-token"),
+      },
+    };
+    axios
+      .get(process.env.REACT_APP_BACKEND_URL + "/api/auth", config)
+      .then((res) => {
+        setname(res.data.fullName);
+      });
+  }, []);
+
   return (
     <div>
       <div className="row">
@@ -13,7 +29,7 @@ export default function SideNav() {
         </div>
         <br /> <br />
         <div className="col-lg-12 text-center">
-          <p>senurajayade@gmail.com</p>
+          <p>{name}</p>
           <button
             className="btn btn-danger"
             onClick={() => {

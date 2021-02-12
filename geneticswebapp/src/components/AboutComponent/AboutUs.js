@@ -42,7 +42,7 @@ export default function AboutUs() {
             >
               <h3 className=" text-center">WHO WE ARE</h3>
               <hr className="HrBreaker" />
-              <p className=" text-center">
+              <p className=" text-center" style={{ color: "white" }}>
                 The Genetics Society of Sri Jayewardenepura University is an
                 academic association among the University undergraduates under
                 the Applied Science Stream. It was founded by Prof. B.G.D.N. K
