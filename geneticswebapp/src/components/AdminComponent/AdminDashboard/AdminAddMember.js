@@ -51,7 +51,6 @@ export default function AdminAddMember() {
       .catch((err) => {
         alert("Error..Try Again");
         window.location = "/admin";
-        console.log(err);
       });
   }
 
