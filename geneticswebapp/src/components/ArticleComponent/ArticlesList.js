@@ -13,12 +13,10 @@ export default function ArticlesList() {
     axios
       .get(process.env.REACT_APP_BACKEND_URL + "/api/article")
       .then((res) => {
-        console.log(res);
         setarticleList(res.data);
         setloadingStatus(true);
       })
       .catch((err) => {
-        console.log(err);
         setloadingStatus(true);
       });
   }, []);

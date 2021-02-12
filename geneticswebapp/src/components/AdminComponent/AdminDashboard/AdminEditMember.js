@@ -26,8 +26,6 @@ export default function AdminEditMember(props) {
       window.location = "/admin";
     }
 
-    console.log(props.location.data);
-
     const config = {
       headers: {
         "x-auth-token": localStorage.getItem("x-auth-token"),
@@ -84,7 +82,6 @@ export default function AdminEditMember(props) {
         .catch((err) => {
           alert("Error..Try Again");
           window.location = "/admin";
-          console.log(err);
         });
     } else {
       const newMember = {
