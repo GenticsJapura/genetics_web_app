@@ -44,11 +44,10 @@ export default function AdminArticleTable() {
     axios
       .get(process.env.REACT_APP_BACKEND_URL + "/api/article")
       .then((res) => {
-        console.log(res);
         setarticleList(res.data);
       })
       .catch((err) => {
-        console.log(err);
+        alert("Something went wrong");
       });
   }
 
@@ -74,7 +73,7 @@ export default function AdminArticleTable() {
         getAllData();
       })
       .catch((err) => {
-        console.log(err);
+        alert("Something went wrong");
       });
   }
 

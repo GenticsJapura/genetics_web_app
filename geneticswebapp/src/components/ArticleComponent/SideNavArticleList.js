@@ -9,11 +9,10 @@ export default function SideNavArticleList() {
     axios
       .get(process.env.REACT_APP_BACKEND_URL + "/api/article/all")
       .then((res) => {
-        console.log(res);
         setarticleList(res.data);
       })
       .catch((err) => {
-        console.log(err);
+        alert("Something Went Wrong");
       });
   }, []);
 

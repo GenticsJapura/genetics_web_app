@@ -22,11 +22,10 @@ export default function Contactsection() {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          console.log("success");
+          alert("Email sent");
         },
         (error) => {
-          console.log(error.text);
+          alert("Something went wrong");
         }
       );
     e.target.reset();

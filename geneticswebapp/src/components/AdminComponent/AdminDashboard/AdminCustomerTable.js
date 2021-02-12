@@ -52,11 +52,10 @@ export default function AdminCustomerTable() {
     axios
       .get(process.env.REACT_APP_BACKEND_URL + "/api/member", config)
       .then((res) => {
-        console.log(res);
         setmemberList(res.data);
       })
       .catch((err) => {
-        console.log(err);
+        alert("Something went wrong");
       });
   }
 
@@ -77,7 +76,7 @@ export default function AdminCustomerTable() {
         getAllData();
       })
       .catch((err) => {
-        console.log(err);
+        alert("Something went wrong");
       });
   }
 

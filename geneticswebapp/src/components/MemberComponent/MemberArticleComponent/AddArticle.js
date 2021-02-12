@@ -35,7 +35,7 @@ export default function AddArticle() {
         setmemberName(res.data.fullName);
       })
       .catch((err) => {
-        console.log(err);
+        alert("Something went wrong");
       });
   }, []);
 
@@ -78,7 +78,8 @@ export default function AddArticle() {
         },
         (error) => {
           //error function
-          console.log(error);
+
+          alert("Something went wrong");
         },
         () => {
           //complete function
@@ -113,8 +114,6 @@ export default function AddArticle() {
       coverImage,
     };
 
-    console.log(config);
-    console.log(newArticle);
     axios
       .post(
         process.env.REACT_APP_BACKEND_URL + "/api/article",
