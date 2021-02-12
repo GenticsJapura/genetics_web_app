@@ -13,7 +13,7 @@ export default function AdminSideNav() {
         </div>
         <br /> <br />
         <div className="col-lg-12 text-center">
-          <p>senurajayade@gmail.com</p>
+          <p>ADMIN</p>
           <Link className="btn btn-success " to="/admin">
             DASHBOARD
           </Link>
