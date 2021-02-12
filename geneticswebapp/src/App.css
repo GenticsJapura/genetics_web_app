@@ -260,3 +260,13 @@ nav ul li {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.ReactLoadingComponent {
+  margin: auto;
+  width: 200px;
+  height: 600px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}

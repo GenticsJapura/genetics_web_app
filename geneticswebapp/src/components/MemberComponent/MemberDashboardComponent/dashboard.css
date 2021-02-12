@@ -151,3 +151,12 @@ a[data-toggle="collapse"] {
 .admindashboardCol {
   padding: 5px;
 }
+
+.ReactLoadingComponentMember {
+  margin: auto;
+  width: 200px;
+  height: 600px;
+
+  top: 50%;
+  left: 50%;
+}
