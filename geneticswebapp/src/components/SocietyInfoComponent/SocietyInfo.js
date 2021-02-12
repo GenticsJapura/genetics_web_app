@@ -14,7 +14,7 @@ export default function SocietyInfo() {
               <i class="fas fa-users homepagefontawesomeicons"></i>
             </div>
             <div className="col-lg-12 col-sm-12 text-center homepagefontawesometext">
-              <p>Members</p>
+              <p className="societyInfoText">Members</p>
               <span className="countDownText">
                 <CountUp start={0} end={10} duration={10} separator=" " /> +
               </span>
@@ -30,7 +30,7 @@ export default function SocietyInfo() {
               <i class="fas fa-user-tie homepagefontawesomeicons"></i>
             </div>
             <div className="col-lg-12 col-sm-12 text-center homepagefontawesometext">
-              <p>Lectures</p>
+              <p className="societyInfoText">Lectures</p>
               <span className="countDownText">
                 <CountUp start={0} end={10} duration={10} separator=" " /> +
               </span>
@@ -46,7 +46,7 @@ export default function SocietyInfo() {
               <i class="far fa-newspaper homepagefontawesomeicons"></i>
             </div>
             <div className="col-lg-12 col-sm-12 text-center homepagefontawesometext">
-              <p>Articles</p>
+              <p className="societyInfoText">Articles</p>
               <span className="countDownText">
                 <CountUp start={0} end={10} duration={10} separator=" " /> +
               </span>

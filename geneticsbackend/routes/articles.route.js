@@ -5,6 +5,7 @@ const {
   addArticle,
   getAllArticlesByMember,
   getAllArticles,
+  getAllArticlesMixed,
   getArticle,
   updateArticle,
   deleteArticle,
@@ -16,6 +17,7 @@ const router = express.Router();
 router.post("/", auth, addArticle);
 router.get("/member", auth, getAllArticlesByMember);
 router.get("/", getAllArticles);
+router.get("/all", getAllArticlesMixed);
 router.get("/:id", getArticle);
 router.put("/:id", auth, updateArticle);
 router.delete("/:id", auth, deleteArticle);

@@ -28,3 +28,9 @@
 .societyinfoDiv {
   padding: 2%;
 }
+
+.societyInfoText {
+  font-size: large;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+}
