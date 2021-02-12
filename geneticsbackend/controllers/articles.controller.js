@@ -35,13 +35,14 @@ const addArticle = async (req, res) => {
   }
 };
 
-//Get All Articles Function
+//Get All Articles Function by Member
 const getAllArticlesByMember = async (req, res, next) => {
   try {
     const id = req.user.id; //get user id from the json web token
     const articles = await firestore
       .collection("articles")
-      .where("memberID", "==", id);
+      .where("memberID", "==", id)
+      .orderBy("dataInsertedDate", "desc");
     const data = await articles.get();
     const articlesArray = [];
     if (data.empty) {
@@ -56,7 +57,41 @@ const getAllArticlesByMember = async (req, res, next) => {
           doc.data().description,
           doc.data().text,
           doc.data().coverImage,
-          doc.data().rate
+          doc.data().rate,
+          doc.data().dataInsertedDate
+        );
+        articlesArray.push(article);
+      });
+      res.send(articlesArray);
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(400).send(error.message);
+  }
+};
+
+//Get All Articles Function
+const getAllArticles = async (req, res, next) => {
+  try {
+    const articles = await firestore
+      .collection("articles")
+      .orderBy("dataInsertedDate", "desc");
+    const data = await articles.get();
+    const articlesArray = [];
+    if (data.empty) {
+      res.status(404).send("No Aricle Record Found");
+    } else {
+      data.forEach((doc) => {
+        const article = new Article(
+          doc.id,
+          doc.data().memberID,
+          doc.data().memberName,
+          doc.data().title,
+          doc.data().description,
+          doc.data().text,
+          doc.data().coverImage,
+          doc.data().rate,
+          doc.data().dataInsertedDate
         );
         articlesArray.push(article);
       });
@@ -67,10 +102,11 @@ const getAllArticlesByMember = async (req, res, next) => {
   }
 };
 
-//Get All Articles Function
-const getAllArticles = async (req, res, next) => {
+//Get All Articles Mixed Function
+const getAllArticlesMixed = async (req, res, next) => {
   try {
-    const articles = await firestore.collection("articles");
+    const articles = await firestore.collection("articles").limit(5);
+
     const data = await articles.get();
     const articlesArray = [];
     if (data.empty) {
@@ -85,7 +121,8 @@ const getAllArticles = async (req, res, next) => {
           doc.data().description,
           doc.data().text,
           doc.data().coverImage,
-          doc.data().rate
+          doc.data().rate,
+          doc.data().dataInsertedDate
         );
         articlesArray.push(article);
       });
@@ -140,6 +177,7 @@ module.exports = {
   addArticle,
   getAllArticlesByMember,
   getAllArticles,
+  getAllArticlesMixed,
   getArticle,
   updateArticle,
   deleteArticle,

@@ -12,7 +12,10 @@ export default function SingleArticle(props) {
   const [text, settext] = useState();
 
   useEffect(() => {
-    console.log(props.location.data);
+    if (!props.location.data) {
+      window.location = "/articles";
+    }
+
     axios
       .get(
         process.env.REACT_APP_BACKEND_URL +
