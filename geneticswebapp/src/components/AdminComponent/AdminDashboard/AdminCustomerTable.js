@@ -10,6 +10,8 @@ import TableHead from "@material-ui/core/TableHead";
 import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 
+import { Link } from "react-router-dom";
+
 const columns = [
   { id: "id", label: "ID", minWidth: 170 },
   { id: "userName", label: "UserName", minWidth: 100 },
@@ -130,14 +132,15 @@ export default function AdminCustomerTable() {
                               Remove
                             </button>
                           ) : column.id === "updateID" ? (
-                            <button
-                              className="btn btn-warning btn-sm"
-                              // onClick={() => {
-                              //   deleteArticle(value);
-                              // }}
+                            <Link
+                              to={{
+                                pathname: `/editmember`,
+                                data: value,
+                              }}
+                              class="btn btn-warning btn-sm" //change btn icon
                             >
-                              EDIT
-                            </button>
+                              Edit
+                            </Link>
                           ) : (
                             value
                           )}

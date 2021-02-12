@@ -8,9 +8,6 @@ const Navbar = () => {
     <div className="navcontainer">
       <nav className="navbar navbar-expand-lg navbar-light navbar-fixed-top">
         <div className="container">
-          {/* <a className="navbar-brand" href="#">
-          <img src={logo} />
-        </a> */}
           <h3 style={{ color: "white" }}>GEMSOC</h3>
           <button
             className="navbar-toggler"
@@ -37,24 +34,25 @@ const Navbar = () => {
                   About us
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/articles">
-                  Articles
-                </a>
-              </li>
-              <li className="nav-item">
+
+              {/* <li className="nav-item">
                 <a className="nav-link" href="#">
                   News
                 </a>
-              </li>
-              <li className="nav-item">
+              </li> */}
+              {/* <li className="nav-item">
                 <a className="nav-link" href="#">
                   Buy & sell
                 </a>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#contact">
                   Contact us
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/articles">
+                  Articles
                 </a>
               </li>
               <li className="nav-item">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import Navbar from "../Navbar";
+import NavbarTwo from "../NavbarTwo";
 
 import SideNavArticleList from "./SideNavArticleList";
 import "./Articles.css";
@@ -31,7 +31,7 @@ export default function SingleArticle(props) {
 
   return (
     <div>
-      <Navbar />
+      <NavbarTwo />
       <div className="ArticleBackground">
         <div className="header-wraperArticle ">
           <div className="main-infoArticleHeader ">
