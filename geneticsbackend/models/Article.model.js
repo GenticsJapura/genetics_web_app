@@ -7,7 +7,8 @@ class Article {
     description,
     text,
     coverImage,
-    rate
+    rate,
+    dataInsertedDate
   ) {
     this.id = id;
     this.memberID = memberID;
@@ -17,6 +18,7 @@ class Article {
     this.text = text;
     this.coverImage = coverImage;
     this.rate = rate;
+    this.dataInsertedDate = dataInsertedDate;
   }
 }
 
