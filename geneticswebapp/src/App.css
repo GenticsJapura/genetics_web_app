@@ -224,6 +224,14 @@ nav ul li {
 .CaroselImage {
   border-radius: 30px;
 }
+
+@media screen and (max-width: 500px) {
+  .headerText {
+    font-size: 70px;
+    font-weight: bolder;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .footer {
     background-image: url("./img/footer.png");

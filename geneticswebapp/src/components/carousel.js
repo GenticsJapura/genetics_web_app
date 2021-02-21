@@ -8,7 +8,7 @@ import ImageThree from "./images/img3.jpg";
 
 const CarouselDemo = () => {
   return (
-    <div className="corouseldemo container mt-5 mb-5">
+    <div className="corouseldemo container mt-4 mb-5">
       <Carousel>
         <Carousel.Item interval={1000}>
           <img
