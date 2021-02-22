@@ -44,10 +44,11 @@
     #006bb7,
     #067fc9
   );
-  padding: 5px 7px;
+  padding: 5px 5px;
   border-radius: 40px;
   color: aliceblue;
   font-weight: bold;
+  font-size: normal;
 }
 
 .paratext {
@@ -128,6 +129,33 @@
 .CommetteMemberDiv {
   /* background-image: url("../images/interface1.png");
   background-size: cover; */
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 800px) {
+  .LecComponentDesktop {
+    display: none;
+  }
+
+  .LecComponentMobile {
+    display: block;
+  }
+
+  .AboutUsRowOne img {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+
+  .LecurersImages {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+
+  .LecturerInfoColOne {
+    text-align: center;
+    margin-top: 6%;
+  }
 }
 
 /* On screens that are 600px or less, set the background color to olive */

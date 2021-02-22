@@ -21,7 +21,7 @@ export default function AdminDashboard() {
       !localStorage.getItem("x-auth-token") &&
       localStorage.getItem("role") !== "Admin"
     ) {
-      window.location = "/";
+      window.location = "/adminlogin";
     }
   }, []);
 

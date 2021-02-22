@@ -12,7 +12,7 @@ export default function SideNavArticleList() {
         setarticleList(res.data);
       })
       .catch((err) => {
-        alert("Something Went Wrong");
+        console.log("Something Went Wrong");
       });
   }, []);
 
