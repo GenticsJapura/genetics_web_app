@@ -53,7 +53,8 @@ export default function AdminEditMember(props) {
       });
   }, []);
 
-  function EditMember() {
+  function EditMember(e) {
+    e.preventDefault();
     const config = {
       headers: {
         "x-auth-token": localStorage.getItem("x-auth-token"),

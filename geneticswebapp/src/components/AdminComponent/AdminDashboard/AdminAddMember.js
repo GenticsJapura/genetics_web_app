@@ -22,7 +22,8 @@ export default function AdminAddMember() {
     }
   }, []);
 
-  function AddMember() {
+  function AddMember(e) {
+    e.preventDefault();
     const config = {
       headers: {
         "x-auth-token": localStorage.getItem("x-auth-token"),
