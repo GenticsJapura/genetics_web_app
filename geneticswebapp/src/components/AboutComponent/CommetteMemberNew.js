@@ -23,7 +23,7 @@ export default function CommetteMember() {
         </div>
         {/* Column One Start */}
         <div
-          className="col-lg-3 col-md-4 AboutUsComponent"
+          className="col-lg-3 col-md-6 AboutUsComponent"
           data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
@@ -48,7 +48,7 @@ export default function CommetteMember() {
         {/* Column One End */}
         {/* Column One Start */}
         <div
-          className="col-lg-3 col-md-4 AboutUsComponent"
+          className="col-lg-3 col-md-6 AboutUsComponent"
           data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
@@ -73,7 +73,7 @@ export default function CommetteMember() {
         {/* Column One End */}
         {/* Column One Start */}
         <div
-          className="col-lg-3 col-md-4 AboutUsComponent"
+          className="col-lg-3 col-md-6 AboutUsComponent"
           data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
@@ -98,7 +98,7 @@ export default function CommetteMember() {
         {/* Column One End */}
         {/* Column One Start */}
         <div
-          className="col-lg-3 col-md-4 AboutUsComponent"
+          className="col-lg-3 col-md-6 AboutUsComponent"
           data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
@@ -119,7 +119,7 @@ export default function CommetteMember() {
         {/* Column One End */}
         {/* Column One Start */}
         <div
-          className="col-lg-3 col-md-4 AboutUsComponent"
+          className="col-lg-3 col-md-6 AboutUsComponent"
           data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
@@ -144,7 +144,7 @@ export default function CommetteMember() {
         {/* Column One End */}
         {/* Column One Start */}
         <div
-          className="col-lg-3 col-md-4 AboutUsComponent"
+          className="col-lg-3 col-md-6 AboutUsComponent"
           data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
@@ -169,7 +169,7 @@ export default function CommetteMember() {
         {/* Column One End */}
         {/* Column One Start */}
         <div
-          className="col-lg-3 col-md-4 AboutUsComponent"
+          className="col-lg-3 col-md-6 AboutUsComponent"
           data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
@@ -193,7 +193,7 @@ export default function CommetteMember() {
         {/* Column One End */}
         {/* Column One Start */}
         <div
-          className="col-lg-3 col-md-4 AboutUsComponent"
+          className="col-lg-3 col-md-6 AboutUsComponent"
           data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
@@ -217,7 +217,7 @@ export default function CommetteMember() {
         {/* Column One End */}
         {/* Column One Start */}
         <div
-          className="col-lg-3 col-md-4 AboutUsComponent"
+          className="col-lg-3 col-md-6 AboutUsComponent"
           data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
@@ -241,7 +241,7 @@ export default function CommetteMember() {
         {/* Column One End */}
         {/* Column One Start */}
         <div
-          className="col-lg-3 col-md-4 AboutUsComponent"
+          className="col-lg-3 col-md-6 AboutUsComponent"
           data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
@@ -261,7 +261,7 @@ export default function CommetteMember() {
         {/* Column One End */}
         {/* Column One Start */}
         <div
-          className="col-lg-3 col-md-4 AboutUsComponent"
+          className="col-lg-3 col-md-6 AboutUsComponent"
           data-aos="zoom-in"
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
