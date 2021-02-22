@@ -276,9 +276,9 @@ export default function CommetteMember() {
           </div>
 
           <div class="card-body text-center">
-            <p class="card-text">Senior Prof. Nissanka de Silva</p>
+            <p class="card-text"> Prof. Nissanka de Silva</p>
             <p class="card-text ">
-              <span className="memberrole">Advisor </span>
+              <span className="memberrole">ADVISOR </span>
             </p>
           </div>
         </div>

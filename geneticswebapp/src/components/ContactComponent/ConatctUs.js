@@ -13,22 +13,25 @@ export default function Contactsection() {
   function sendEmail(e) {
     e.preventDefault();
 
+    console.log(e.target);
+
     emailjs
       .sendForm(
-        "service_1ua8wyq",
-        "template_1fbr7iu",
+        "gmail",
+        "template_z630g3e",
         e.target,
-        "user_5S6aiBc4zEh6anPwvWsu4"
+        "user_nVP1oaZN3yaeiUwAfgw6P"
       )
       .then(
         (result) => {
           alert("Email sent");
+          e.target.reset();
         },
         (error) => {
           alert("Something went wrong");
+          e.target.reset();
         }
       );
-    e.target.reset();
   }
 
   return (

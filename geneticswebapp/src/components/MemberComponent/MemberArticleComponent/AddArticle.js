@@ -166,7 +166,7 @@ export default function AddArticle() {
             <div class="form-group">
               <img
                 src={coverImage}
-                style={{ width: "200px", height: "200px" }}
+                style={{ width: "270px", height: "200px" }}
               />
               {imageUploadingState}
               <input

@@ -8,7 +8,7 @@ function Footer() {
         <div className="row justify-content-center">
           <div className="col-4 offset-1 col-sm-2">
             <br />
-            <h5>Links</h5>
+
             <ul className="list-unstyled">
               <li>
                 <a class="nav-link js-scroll-trigger footerLink" href="#home">
@@ -45,7 +45,7 @@ function Footer() {
               <br />
               <i className="fa fa-envelope fa-lg" />:{" "}
               <a href="mailto:confusion@food.net" className="footerLink">
-                usjgmbsociety@gmail.com
+                usjgemsoc@gmail.com
               </a>
             </address>
           </div>
@@ -54,13 +54,22 @@ function Footer() {
               <a className="btn btn-social-icon btn-google" href="">
                 <i className="fa fa-google-plus" />
               </a>
-              <a className="btn btn-social-icon btn-facebook" href="">
+              <a
+                className="btn btn-social-icon btn-facebook"
+                href="https://www.facebook.com/Gemsocusj01/"
+              >
                 <i class="fab fa-facebook-square fa-2x socialIcon socialIconFacebook"></i>
               </a>
-              <a className="btn btn-social-icon btn-linkedin" href="">
+              <a
+                className="btn btn-social-icon btn-linkedin"
+                href="https://www.linkedin.com/in/gemsoc-usj-26009b201"
+              >
                 <i class="fab fa-linkedin fa-2x socialIcon socialIconLinkedin"></i>
               </a>
-              <a className="btn btn-social-icon btn-twitter" href="">
+              <a
+                className="btn btn-social-icon btn-twitter"
+                href="https://twitter.com/GEMSOC_USJ?s=09"
+              >
                 <i class="fab fa-twitter fa-2x socialIcon socialIconTwitter"></i>
               </a>
               <a className="btn btn-social-icon btn-google" href="">
