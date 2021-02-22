@@ -42,32 +42,41 @@ export default function AboutUs() {
             >
               <h3 className=" text-center">WHO WE ARE</h3>
               <hr className="HrBreaker" />
-              <p className=" text-center" style={{ color: "white" }}>
-                The Genetics Society of Sri Jayewardenepura University is an
-                academic association among the University undergraduates under
-                the Applied Science Stream. It was founded by Prof. B.G.D.N. K
-                de Silva in 2010, with the objective to develop the knowledge on
-                genetics among school and University students in Sri Lanka. It
-                is one of the first few learned societies devoted to genetics.
-                The committee is managed by senior undergraduates of the
-                University and the membership of the society is shared among the
-                University undergraduates, research students and University
-                academics.
+              <p
+                className=" text-center"
+                style={{ color: "white", fontSize: "13px" }}
+              >
+                The Genetics and Molecular Biology Society of University of Sri
+                Jayewardenepura is an academic association functioning among
+                young undergraduates with the aim of extending transcending
+                excellence and passion in propagating knowledge among the
+                society about the fields of Genetics and Molecular Biology. It
+                also aims at spreading the essence of Genetic diversity that
+                underlies Biological Diversity to raise awareness about
+                conservation and hence extending an invaluable service to the
+                community as a whole. In order to accomplish these goals, the
+                society organizes workshops, webinars and competitions, and
+                publishes articles on focused and timely topics. Through the
+                various events organized, we aspire to cater an institutional
+                space to its members in developing their soft skills and be a
+                leader in the pursuit and dissemination of knowledge.
               </p>
             </div>
           </div>
 
-          <div className="AboutUsComponent">
-            <MainCommette />
-          </div>
-
           <div className="AboutUsComponent ">
+            <br />
             <div className="LecComponentDesktop ">
               <Particle />
             </div>
             <div className="LecComponentMobile ">
               <LecturersMobileComponent />
             </div>
+          </div>
+
+          <div className="AboutUsComponent">
+            <br />
+            <MainCommette />
           </div>
         </div>
       </div>

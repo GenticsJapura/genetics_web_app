@@ -1,7 +1,8 @@
 import React from "react";
 
-import member1 from "./img/member1.jpg";
-import member2 from "./img/member2.jpg";
+import nissanka from "./img/nissanka.jpg";
+import hiruni from "./img/hiruni.jpg";
+import iresha from "./img/iresha.jpg";
 
 export default function LecturersComponent() {
   return (
@@ -22,7 +23,7 @@ export default function LecturersComponent() {
               data-aos-easing="ease-in-sine"
               data-aos-duration="1000"
             >
-              <img src={member1} className="LecurersImages" />
+              <img src={nissanka} className="LecurersImages" />
             </div>
             <div
               className="col-lg-8 col-md-6 LecturerInfoColOne LecComponent"
@@ -33,16 +34,14 @@ export default function LecturersComponent() {
               data-aos-duration="1000"
             >
               <h4>
-                <span className="paratext">Prof.Lasantha Dassanayake</span>
+                <span className="paratext">Prof. B.G.D.N.K. De Silva</span>
               </h4>
 
+              <p>B.Sc (USJ), Ph.D. (USJ)</p>
+              <p>Senior Professor</p>
               <p>
-                BSc Eng. (Hons) in Computer Systems & Engineering, University of
-                Moratuwa, Sri Lanka, 1996
-              </p>
-              <p>
-                Ph.D. in Robotics and Intelligent Systems, Saga University,
-                Japan, 2003
+                Research Interests: Genetics, Molecular Biology, Medical
+                Entomology, Molecular Entomology
               </p>
             </div>
           </div>
@@ -60,15 +59,16 @@ export default function LecturersComponent() {
               data-aos-duration="1000"
             >
               <h4>
-                <span className="paratext">Prof.Malani Kaluthuge</span>
+                <span className="paratext">Dr. Hiruni Harischandra </span>
               </h4>
+
+              <p>B.Sc. (ISU), Ph.D. (ISU)</p>
+              <p>Senior Lecturer – Genetics & Molecular Biology Unit</p>
               <p>
-                BSc Eng. (Hons) in Computer Systems & Engineering, University of
-                Moratuwa, Sri Lanka, 1996
-              </p>
-              <p>
-                Ph.D. in Robotics and Intelligent Systems, Saga University,
-                Japan, 2003
+                Research Interests- Genetics, Molecular Biology, Parasite and
+                host interactions, development of diagnostics for Lymphatic
+                filariasis, investigating the spread of Lymphatic filariasis in
+                Sri Lanka
               </p>
             </div>
             <div
@@ -78,10 +78,7 @@ export default function LecturersComponent() {
               data-aos-easing="ease-in-sine"
               data-aos-duration="1000"
             >
-              <img
-                src="https://essa-africa.org/sites/default/files/2019-11/Aishwarya%20Tiku.jpg"
-                className="LecurersImages"
-              />
+              <img src={hiruni} className="LecurersImages" />
             </div>
           </div>
         </div>
@@ -97,7 +94,7 @@ export default function LecturersComponent() {
               data-aos-easing="ease-in-sine"
               data-aos-duration="1000"
             >
-              <img src={member1} className="LecurersImages" />
+              <img src={iresha} className="LecurersImages" />
             </div>
             <div
               className="col-lg-8 col-md-6 LecturerInfoColOne "
@@ -108,23 +105,19 @@ export default function LecturersComponent() {
               data-aos-duration="1000"
             >
               <h4>
-                {" "}
-                <span className="paratext">Prof.Lasantha Dassanayake</span>
+                <span className="paratext">Dr. Iresha N. Harischandra</span>
               </h4>
+              <p>B. Sc. (UOC), Ph.D. (USJP)</p>
               <p>
-                BSc Eng. (Hons) in Computer Systems & Engineering, University of
-                Moratuwa, Sri Lanka, 1996
-              </p>
-              <p>
-                Ph.D. in Robotics and Intelligent Systems, Saga University,
-                Japan, 2003
+                Research Interest – Population genetics, Conservation genetics,
+                Evolutionary and Population genomics of wild animals
               </p>
             </div>
           </div>
         </div>
         {/* Column One End */}
         {/* Column Two Start */}
-        <div className="col-md-12 AboutUsComponent">
+        {/* <div className="col-md-12 AboutUsComponent">
           <div className="row">
             <div
               className="col-lg-8 col-md-6 LecturerInfoColTwo"
@@ -135,15 +128,12 @@ export default function LecturersComponent() {
               data-aos-duration="1000"
             >
               <h4>
-                <span className="paratext">Prof.Malani Kaluthuge</span>
+                <span className="paratext">Dr. Iresha N. Harischandra</span>
               </h4>
+              <p>B. Sc. (UOC), Ph.D. (USJP)</p>
               <p>
-                BSc Eng. (Hons) in Computer Systems & Engineering, University of
-                Moratuwa, Sri Lanka, 1996
-              </p>
-              <p>
-                Ph.D. in Robotics and Intelligent Systems, Saga University,
-                Japan, 2003
+                Research Interest – Population genetics, Conservation genetics,
+                Evolutionary and Population genomics of wild animals
               </p>
             </div>
             <div
@@ -153,13 +143,10 @@ export default function LecturersComponent() {
               data-aos-easing="ease-in-sine"
               data-aos-duration="1000"
             >
-              <img
-                src="https://essa-africa.org/sites/default/files/2019-11/Aishwarya%20Tiku.jpg"
-                className="LecurersImages"
-              />
+              <img src={iresha} className="LecurersImages" />
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Column Two End */}
       </div>
     </div>

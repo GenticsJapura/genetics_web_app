@@ -16,7 +16,7 @@ const Header = () => {
               strings={[
                 "Genetics",
                 "Molecular Biology Society",
-                "Univerity of Sri Jayewardenepura",
+                "University Of Sri Jayewardenepura",
               ]}
               typeSpeed={40}
               backSpeed={60}
