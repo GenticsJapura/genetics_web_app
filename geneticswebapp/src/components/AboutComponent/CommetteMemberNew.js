@@ -1,7 +1,17 @@
 import React from "react";
 
-import member1 from "./img/member1.jpg";
-import member2 from "./img/member2.jpg";
+import nissanka from "./img/nissanka.jpg";
+import hiruni from "./img/hiruni.jpg";
+import iresha from "./img/iresha.jpg";
+import PiyumiSandunika from "./img/PiyumiSandunika.jpg";
+import RidmaSirimanna from "./img/RidmaSirimanna.jpeg";
+import Shafana from "./img/Shafana.jpeg";
+import AnjaleeGunathunga from "./img/AnjaleeGunathunga.jpeg";
+import SenaliLavanyaPeiris from "./img/SenaliLavanyaPeiris.jpg";
+import IsuriKarunaratne from "./img/IsuriKarunaratne.jpg";
+import PavithraBamunusinghe from "./img/PavithraBamunusinghe.jpg";
+import Pulmini from "./img/Pulmini.jpg";
+import sahan from "./img/sahan.png";
 
 export default function CommetteMember() {
   return (
@@ -21,7 +31,7 @@ export default function CommetteMember() {
         >
           <div className="text-center">
             <img
-              src={member1}
+              src={PiyumiSandunika}
               class="card-img-top MemberImage"
               alt="memeber1"
             />
@@ -46,7 +56,7 @@ export default function CommetteMember() {
         >
           <div className="text-center">
             <img
-              src={member1}
+              src={RidmaSirimanna}
               class="card-img-top MemberImage"
               alt="memeber1"
             />
@@ -71,7 +81,7 @@ export default function CommetteMember() {
         >
           <div className="text-center">
             <img
-              src={member1}
+              src={Shafana}
               class="card-img-top MemberImage"
               alt="memeber1"
             />
@@ -95,11 +105,7 @@ export default function CommetteMember() {
           data-aos-duration="1000"
         >
           <div className="text-center">
-            <img
-              src={member1}
-              class="card-img-top MemberImage"
-              alt="memeber1"
-            />
+            <img src={hiruni} class="card-img-top MemberImage" alt="memeber1" />
           </div>
 
           <div class="card-body text-center">
@@ -121,7 +127,7 @@ export default function CommetteMember() {
         >
           <div className="text-center">
             <img
-              src={member1}
+              src={AnjaleeGunathunga}
               class="card-img-top MemberImage"
               alt="memeber1"
             />
@@ -146,7 +152,7 @@ export default function CommetteMember() {
         >
           <div className="text-center">
             <img
-              src={member1}
+              src={SenaliLavanyaPeiris}
               class="card-img-top MemberImage"
               alt="memeber1"
             />
@@ -171,7 +177,7 @@ export default function CommetteMember() {
         >
           <div className="text-center">
             <img
-              src={member1}
+              src={IsuriKarunaratne}
               class="card-img-top MemberImage"
               alt="memeber1"
             />
@@ -195,7 +201,7 @@ export default function CommetteMember() {
         >
           <div className="text-center">
             <img
-              src={member1}
+              src={PavithraBamunusinghe}
               class="card-img-top MemberImage"
               alt="memeber1"
             />
@@ -219,7 +225,7 @@ export default function CommetteMember() {
         >
           <div className="text-center">
             <img
-              src={member1}
+              src={Pulmini}
               class="card-img-top MemberImage"
               alt="memeber1"
             />
@@ -242,11 +248,7 @@ export default function CommetteMember() {
           data-aos-duration="1000"
         >
           <div className="text-center">
-            <img
-              src={member1}
-              class="card-img-top MemberImage"
-              alt="memeber1"
-            />
+            <img src={sahan} class="card-img-top MemberImage" alt="memeber1" />
           </div>
 
           <div class="card-body text-center">
@@ -267,7 +269,7 @@ export default function CommetteMember() {
         >
           <div className="text-center">
             <img
-              src={member1}
+              src={nissanka}
               class="card-img-top MemberImage"
               alt="memeber1"
             />

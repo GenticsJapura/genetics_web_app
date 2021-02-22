@@ -1,7 +1,8 @@
 import React from "react";
 
-import member1 from "./img/member1.jpg";
-import member2 from "./img/member2.jpg";
+import nissanka from "./img/nissanka.jpg";
+import hiruni from "./img/hiruni.jpg";
+import iresha from "./img/iresha.jpg";
 
 export default function LecturersComponent() {
   return (
@@ -22,7 +23,7 @@ export default function LecturersComponent() {
               data-aos-easing="ease-in-sine"
               data-aos-duration="1000"
             >
-              <img src={member1} className="LecurersImages" />
+              <img src={nissanka} className="LecurersImages" />
             </div>
             <div
               className="col-lg-8 col-md-6 LecturerInfoColOne LecComponent"
@@ -77,10 +78,7 @@ export default function LecturersComponent() {
               data-aos-easing="ease-in-sine"
               data-aos-duration="1000"
             >
-              <img
-                src="https://essa-africa.org/sites/default/files/2019-11/Aishwarya%20Tiku.jpg"
-                className="LecurersImages"
-              />
+              <img src={hiruni} className="LecurersImages" />
             </div>
           </div>
         </div>
@@ -96,7 +94,7 @@ export default function LecturersComponent() {
               data-aos-easing="ease-in-sine"
               data-aos-duration="1000"
             >
-              <img src={member1} className="LecurersImages" />
+              <img src={iresha} className="LecurersImages" />
             </div>
             <div
               className="col-lg-8 col-md-6 LecturerInfoColOne "
@@ -119,7 +117,7 @@ export default function LecturersComponent() {
         </div>
         {/* Column One End */}
         {/* Column Two Start */}
-        <div className="col-md-12 AboutUsComponent">
+        {/* <div className="col-md-12 AboutUsComponent">
           <div className="row">
             <div
               className="col-lg-8 col-md-6 LecturerInfoColTwo"
@@ -145,13 +143,10 @@ export default function LecturersComponent() {
               data-aos-easing="ease-in-sine"
               data-aos-duration="1000"
             >
-              <img
-                src="https://essa-africa.org/sites/default/files/2019-11/Aishwarya%20Tiku.jpg"
-                className="LecurersImages"
-              />
+              <img src={iresha} className="LecurersImages" />
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Column Two End */}
       </div>
     </div>

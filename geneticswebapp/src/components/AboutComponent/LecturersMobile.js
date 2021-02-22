@@ -1,7 +1,8 @@
 import React from "react";
 
-import member1 from "./img/member1.jpg";
-import member2 from "./img/member2.jpg";
+import nissanka from "./img/nissanka.jpg";
+import hiruni from "./img/hiruni.jpg";
+import iresha from "./img/iresha.jpg";
 
 export default function LecturersMobileComponent() {
   return (
@@ -22,7 +23,7 @@ export default function LecturersMobileComponent() {
               data-aos-easing="ease-in-sine"
               data-aos-duration="1000"
             >
-              <img src={member1} className="LecurersImages" />
+              <img src={nissanka} className="LecurersImages" />
             </div>
             <div
               className="col-md-12 LecturerInfoColOne"
@@ -56,7 +57,7 @@ export default function LecturersMobileComponent() {
               data-aos-easing="ease-in-sine"
               data-aos-duration="1000"
             >
-              <img src={member1} className="LecurersImages" />
+              <img src={hiruni} className="LecurersImages" />
             </div>
             <div
               className="col-md-12 LecturerInfoColOne"
@@ -92,7 +93,7 @@ export default function LecturersMobileComponent() {
               data-aos-easing="ease-in-sine"
               data-aos-duration="1000"
             >
-              <img src={member1} className="LecurersImages" />
+              <img src={iresha} className="LecurersImages" />
             </div>
             <div
               className="col-md-12 LecturerInfoColOne"
