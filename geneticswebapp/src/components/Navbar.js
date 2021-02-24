@@ -40,11 +40,7 @@ const Navbar = () => {
                   News
                 </a>
               </li> */}
-              {/* <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Buy & sell
-                </a>
-              </li> */}
+
               <li className="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#contact">
                   Contact us
@@ -53,6 +49,11 @@ const Navbar = () => {
               <li className="nav-item">
                 <a className="nav-link" href="/articles">
                   Articles
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/buyandsell">
+                  Buy & sell
                 </a>
               </li>
               <li className="nav-item">

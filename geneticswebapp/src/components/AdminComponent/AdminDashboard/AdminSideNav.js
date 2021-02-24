@@ -22,6 +22,11 @@ export default function AdminSideNav() {
             ADD MEMBER
           </Link>
           <br />
+
+          <Link className="btn btn-warning  mt-2" to="/addproduct">
+            ADD PRODUCT
+          </Link>
+          <br />
           <button
             className="btn btn-danger mt-2"
             onClick={() => {
