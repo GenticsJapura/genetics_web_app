@@ -100,6 +100,8 @@ export default function Product() {
                 <div className="header-wraperArticle ">
                   <div className="main-infoArticleHeader ">
                     {" "}
+                    <br />
+                    <br /> <br />
                     <h1 style={{ fontWeight: "bolder" }}>BUY & SELL</h1>
                     <p>
                       Stop going for the easy buck and start producing something
@@ -176,7 +178,7 @@ export default function Product() {
           {" "}
           <ReactLoading
             type="spinningBubbles"
-            color="blue"
+            color="#0088b5"
             className="ReactLoadingComponent"
           />
         </div>
