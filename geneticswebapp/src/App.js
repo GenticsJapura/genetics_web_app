@@ -22,6 +22,7 @@ import EditArticle from "./components/MemberComponent/MemberDashboardComponent/A
 import AdminAddMember from "./components/AdminComponent/AdminDashboard/AdminAddMember";
 import AdminEditMember from "./components/AdminComponent/AdminDashboard/AdminEditMember";
 import AdminAddProduct from "./components/AdminComponent/AdminDashboard/AdminAddProduct";
+import Product from "./components/ProductComponent/Product";
 function App() {
   return (
     <React.Fragment>
@@ -127,6 +128,9 @@ function App() {
             <NavbarTwo />
             <Articles />
             <Footer />
+          </Route>
+          <Route path="/buyandsell" exact>
+            <Product />
           </Route>
           <Route path="/login" exact>
             <NavbarTwo />
