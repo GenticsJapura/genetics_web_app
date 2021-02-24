@@ -7,6 +7,7 @@ import "../admin.css";
 
 import AdminCustomerTable from "./AdminCustomerTable";
 import AdminArticleTable from "./AdminArticleTable";
+import AdminProductTable from "./AdminProductTable";
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -43,6 +44,11 @@ export default function AdminDashboard() {
               {" "}
               <h3 className="text-center">Article Table</h3>
               <AdminArticleTable />
+            </div>
+            <div className="col-lg-12 col-sm-12 admindashboardCol mt-5">
+              {" "}
+              <h3 className="text-center">Product Table</h3>
+              <AdminProductTable />
             </div>
           </div>
         </div>
