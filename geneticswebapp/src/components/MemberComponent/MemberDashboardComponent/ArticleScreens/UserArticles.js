@@ -116,7 +116,7 @@ export default function UserArticles(props) {
           {" "}
           <ReactLoading
             type="spinningBubbles"
-            color="blue"
+            color="#0088b5"
             className="ReactLoadingComponentMember"
           />
         </div>

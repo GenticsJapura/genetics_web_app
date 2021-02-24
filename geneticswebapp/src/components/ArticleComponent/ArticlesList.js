@@ -61,7 +61,7 @@ export default function ArticlesList() {
           {" "}
           <ReactLoading
             type="spinningBubbles"
-            color="blue"
+            color="#0088b5"
             className="ReactLoadingComponent"
           />
         </div>

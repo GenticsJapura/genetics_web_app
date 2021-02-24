@@ -82,7 +82,7 @@ export default function SingleArticle(props) {
           {" "}
           <ReactLoading
             type="spinningBubbles"
-            color="blue"
+            color="#0088b5"
             className="ReactLoadingComponent"
             height={"5%"}
             width={"5%"}
