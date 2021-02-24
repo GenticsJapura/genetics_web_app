@@ -127,7 +127,7 @@ export default function AdminAddMember() {
             </div>
 
             <button type="submit" class="btn btn-primary">
-              Submit
+              ADD
             </button>
           </form>
         </div>

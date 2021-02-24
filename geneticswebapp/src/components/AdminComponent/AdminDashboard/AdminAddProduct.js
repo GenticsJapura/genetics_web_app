@@ -6,6 +6,8 @@ import Progress from "./Progress";
 
 import "../admin.css";
 
+import UploadImage from "./img/upload.jpg";
+
 export default function AdminAddProduct() {
   const [title, settitle] = useState("");
   const [price, setprice] = useState("");
@@ -116,7 +118,7 @@ export default function AdminAddProduct() {
             <div class="form-group">
               <label>price</label>
               <input
-                type="price"
+                type="number"
                 class="form-control"
                 placeholder="price"
                 required
@@ -127,8 +129,19 @@ export default function AdminAddProduct() {
             </div>
 
             <div class="form-group">
-              <img src={image} style={{ width: "270px", height: "200px" }} />
-              {imageUploadingState}
+              {image ? (
+                <img src={image} style={{ width: "270px", height: "200px" }} />
+              ) : (
+                <img
+                  src={UploadImage}
+                  style={{ width: "270px", height: "200px" }}
+                />
+              )}
+
+              <br />
+              <span style={{ color: "red", fontWeight: "bold" }}>
+                {imageUploadingState}
+              </span>
               <input
                 type="file"
                 onChange={autoUploadImage}
@@ -142,7 +155,7 @@ export default function AdminAddProduct() {
             </div>
 
             <button type="submit" class="btn btn-primary">
-              Submit
+              ADD
             </button>
           </form>
         </div>
