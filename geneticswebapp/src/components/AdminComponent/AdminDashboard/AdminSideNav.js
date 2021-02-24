@@ -23,6 +23,10 @@ export default function AdminSideNav() {
           </Link>
           <br />
 
+          <Link className="btn btn-warning  mt-2" to="/addnews">
+            ADD NEWS
+          </Link>
+          <br />
           <Link className="btn btn-warning  mt-2" to="/addproduct">
             ADD PRODUCT
           </Link>

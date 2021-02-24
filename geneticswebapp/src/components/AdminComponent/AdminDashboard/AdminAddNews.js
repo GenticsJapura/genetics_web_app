@@ -1,45 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import ReactQuill from "react-quill";
 
 import { storage } from "../../../firebase";
 import Progress from "./Progress";
-import "./AddArticle.css";
+import "./AddNews.css";
 
 import UploadImage from "./img/upload.jpg";
 
-import SideNav from "../MemberDashboardComponent/SideNav";
+import AdminSideNav from "./AdminSideNav";
 
-export default function AddArticle() {
-  const [memberID, setmemberID] = useState();
-  const [memberName, setmemberName] = useState();
+export default function AdminAddNews() {
   const [title, settitle] = useState();
-  const [description, setdescription] = useState();
   const [text, settext] = useState("Write something");
   const [coverImage, setcoverImage] = useState();
 
   const [uploadPercentage, setuploadPercentage] = useState(0);
   const [imageUploadingState, setimageUploadingState] = useState("");
 
-  useEffect(() => {
-    const config = {
-      headers: {
-        "x-auth-token": localStorage.getItem("x-auth-token"),
-      },
-    };
-
-    axios
-      .get(process.env.REACT_APP_BACKEND_URL + "/api/auth", config)
-      .then((res) => {
-        setmemberID(res.data.memberID);
-        setmemberName(res.data.fullName);
-      })
-      .catch((err) => {
-        alert("Something went wrong");
-      });
-  }, []);
-
-  AddArticle.modules = {
+  AdminAddNews.modules = {
     toolbar: [
       [{ header: "1" }, { header: "2" }, { font: [] }],
       [{ size: [] }],
@@ -50,7 +29,7 @@ export default function AddArticle() {
         { indent: "-1" },
         { indent: "+1" },
       ],
-      ["link", "image", "video"],
+      ["link"],
       ["clean"],
     ],
     clipboard: {
@@ -64,9 +43,7 @@ export default function AddArticle() {
     if (e.target.files[0] !== null) {
       const fileName =
         Math.floor(Math.random() * 10000000 + 1) + e.target.files[0].name;
-      const uploadTask = storage
-        .ref(`articles/${fileName}`)
-        .put(e.target.files[0]);
+      const uploadTask = storage.ref(`news/${fileName}`).put(e.target.files[0]);
       uploadTask.on(
         "state_changed",
         (snapshot) => {
@@ -84,7 +61,7 @@ export default function AddArticle() {
         () => {
           //complete function
           storage
-            .ref("articles")
+            .ref("news")
             .child(fileName)
             .getDownloadURL()
             .then((url) => {
@@ -98,9 +75,9 @@ export default function AddArticle() {
     }
   }
 
-  function AddArticle() {
+  function AddNews() {
     if (!coverImage) {
-      alert("You must upload an image");
+      alert("You have to upload an image");
       return false;
     }
     const config = {
@@ -109,28 +86,21 @@ export default function AddArticle() {
       },
     };
 
-    const newArticle = {
-      memberID,
-      memberName,
+    const newNews = {
       title,
-      description,
       text,
       coverImage,
     };
 
     axios
-      .post(
-        process.env.REACT_APP_BACKEND_URL + "/api/article",
-        newArticle,
-        config
-      )
+      .post(process.env.REACT_APP_BACKEND_URL + "/api/news", newNews, config)
       .then(() => {
-        alert("Article Added");
-        window.location = "/member";
+        alert("News Added");
+        window.location = "/admin";
       })
       .catch((err) => {
         alert("Error..Try Again");
-        window.location = "/member";
+        window.location = "/admin";
       });
   }
 
@@ -138,13 +108,13 @@ export default function AddArticle() {
     <div className="container">
       <div className="row">
         <div className="col-md-2">
-          <SideNav />
+          <AdminSideNav />
         </div>
         <div className="col-md-10">
           {" "}
           <div className="AddArticleComponent">
             <div className="text-center">
-              <h5>ADD Article</h5>
+              <h5>ADD NEWS</h5>
               <hr />
             </div>
             <div class="form-group">
@@ -159,18 +129,7 @@ export default function AddArticle() {
                 required
               />
             </div>
-            <div class="form-group">
-              <label>Description</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Enter Description"
-                onChange={(e) => {
-                  setdescription(e.target.value);
-                }}
-                required
-              />
-            </div>
+
             <div class="form-group">
               {coverImage ? (
                 <img
@@ -198,16 +157,17 @@ export default function AddArticle() {
             </div>
             <div class="form-group">
               <ReactQuill
-                modules={AddArticle.modules}
-                placeholder="Write something"
+                modules={AdminAddNews.modules}
+                // value={text}
+                placeholder="Write Something"
                 onChange={(value) => {
                   settext(value);
                 }}
                 required
               />
             </div>
-            <div className="btn btn-success" onClick={AddArticle}>
-              Submit
+            <div className="btn btn-success" onClick={AddNews}>
+              ADD
             </div>
           </div>
         </div>

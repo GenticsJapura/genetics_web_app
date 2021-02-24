@@ -23,6 +23,8 @@ import AdminAddMember from "./components/AdminComponent/AdminDashboard/AdminAddM
 import AdminEditMember from "./components/AdminComponent/AdminDashboard/AdminEditMember";
 import AdminAddProduct from "./components/AdminComponent/AdminDashboard/AdminAddProduct";
 import Product from "./components/ProductComponent/Product";
+import News from "./components/NewsComponent/News";
+import AdminAddNews from "./components/AdminComponent/AdminDashboard/AdminAddNews";
 function App() {
   return (
     <React.Fragment>
@@ -119,6 +121,7 @@ function App() {
             <Navbar />
             <Header />
             <CarouselDemo />
+            <News />
             <SocietyInfo />
             <AboutUs />
             <Contactsection />
@@ -153,6 +156,7 @@ function App() {
           <Route path="/addmember" exact component={AdminAddMember} />
           <Route path="/editmember" exact component={AdminEditMember} />
           <Route path="/addproduct" exact component={AdminAddProduct} />
+          <Route path="/addnews" exact component={AdminAddNews} />
         </div>
       </Router>
     </React.Fragment>
