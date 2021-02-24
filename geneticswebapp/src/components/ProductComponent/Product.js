@@ -10,14 +10,14 @@ import "../../App.css";
 import "./Product.css";
 
 export default function Product() {
-  const [articleList, setarticleList] = useState([]);
+  const [productList, setproductList] = useState([]);
   const [loadingStatus, setloadingStatus] = useState(false);
 
   useEffect(() => {
     axios
       .get(process.env.REACT_APP_BACKEND_URL + "/api/product")
       .then((res) => {
-        setarticleList(res.data);
+        setproductList(res.data);
         setloadingStatus(true);
       })
       .catch((err) => {
@@ -55,24 +55,32 @@ export default function Product() {
                   </button>
                 </div>
                 <div class="modal-body">
-                  <h6>Contact Us</h6>
                   <a href="tel:+94701853727">
-                    <button className="btn btn-warning">+94 701853727</button>
+                    <button className="btn btn-warning">
+                      {" "}
+                      <i className="fa fa-phone fa-lg" />
+                      &nbsp; +94 701853727
+                    </button>
                   </a>
                   <br />
                   <br />
                   <a href="tel:+94741139521">
-                    <button className="btn btn-warning">+94 741139521</button>
+                    <button className="btn btn-warning">
+                      {" "}
+                      <i className="fa fa-phone fa-lg" />
+                      &nbsp; +94 741139521
+                    </button>
                   </a>
                   <br />
                   <br />
                   <a href="mailto:usjgemsoc@gmail.com?subject=To Buy a Product">
                     <button className="btn btn-warning">
-                      usjgemsoc@gmail.com
+                      <i className="fa fa-envelope fa-lg" />
+                      &nbsp; usjgemsoc@gmail.com
                     </button>
                   </a>
                 </div>
-                <div class="modal-footer">
+                {/* <div class="modal-footer">
                   <button
                     type="button"
                     class="btn btn-secondary"
@@ -80,7 +88,7 @@ export default function Product() {
                   >
                     Close
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -92,6 +100,8 @@ export default function Product() {
                 <div className="header-wraperArticle ">
                   <div className="main-infoArticleHeader ">
                     {" "}
+                    <br />
+                    <br /> <br />
                     <h1 style={{ fontWeight: "bolder" }}>BUY & SELL</h1>
                     <p>
                       Stop going for the easy buck and start producing something
@@ -104,7 +114,7 @@ export default function Product() {
               <div className="col-12  mt-5 mb-5">
                 <div className="row mb-5">
                   {/* Column One Start*/}
-                  {articleList.map((article) => {
+                  {productList.map((article) => {
                     return (
                       <div
                         className="col-lg-4 col-md-6  mt-2 mb-3"
@@ -168,7 +178,7 @@ export default function Product() {
           {" "}
           <ReactLoading
             type="spinningBubbles"
-            color="blue"
+            color="#0088b5"
             className="ReactLoadingComponent"
           />
         </div>
