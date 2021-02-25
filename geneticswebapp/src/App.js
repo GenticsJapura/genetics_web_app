@@ -22,9 +22,12 @@ import EditArticle from "./components/MemberComponent/MemberDashboardComponent/A
 import AdminAddMember from "./components/AdminComponent/AdminDashboard/AdminAddMember";
 import AdminEditMember from "./components/AdminComponent/AdminDashboard/AdminEditMember";
 import AdminAddProduct from "./components/AdminComponent/AdminDashboard/AdminAddProduct";
+import AdminEditProduct from "./components/AdminComponent/AdminDashboard/AdminEditProduct";
 import Product from "./components/ProductComponent/Product";
 import News from "./components/NewsComponent/News";
 import AdminAddNews from "./components/AdminComponent/AdminDashboard/AdminAddNews";
+import SingleNews from "./components/NewsComponent/SingleNews";
+import AdminEditNews from "./components/AdminComponent/AdminDashboard/AdminEditNews";
 function App() {
   return (
     <React.Fragment>
@@ -149,14 +152,17 @@ function App() {
             <AdminDashboard />
           </Route>
 
-          <Route path="/article" exact component={SingleArticle} />
+          <Route path="/article/:id" exact component={SingleArticle} />
           <Route path="/addarticle" exact component={AddArticle} />
           <Route path="/member" exact component={MemberDashboard} />
           <Route path="/editarticle" exact component={EditArticle} />
           <Route path="/addmember" exact component={AdminAddMember} />
           <Route path="/editmember" exact component={AdminEditMember} />
           <Route path="/addproduct" exact component={AdminAddProduct} />
+          <Route path="/editproduct/:id" exact component={AdminEditProduct} />
           <Route path="/addnews" exact component={AdminAddNews} />
+          <Route path="/news/:id" exact component={SingleNews} />
+          <Route path="/editnews/:id" exact component={AdminEditNews} />
         </div>
       </Router>
     </React.Fragment>

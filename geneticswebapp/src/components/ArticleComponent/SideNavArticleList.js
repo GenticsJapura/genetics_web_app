@@ -18,30 +18,43 @@ export default function SideNavArticleList() {
 
   return (
     <div>
+      <h5>Related Articles</h5>
+      {/* Article Row Start  */}
+      {/* {articleList.slice(0, 5).map((article) => {
+        return (
+          <a href={"/news/" + article.id}>
+            <div className="row mb-4">
+              <div className="col-md-3 col-sm-2 " style={{ width: "30%" }}>
+                {" "}
+                <img
+                  class="img-fluid"
+                  src={article.coverImage}
+                  alt="Card image cap"
+                />
+              </div>
+              <div className="col-md-8 col-sm-8" style={{ width: "70%" }}>
+                {" "}
+                <div>
+                  <h5 class="card-title text-muted">{article.title}</h5>
+                </div>
+              </div>
+            </div>
+          </a>
+        );
+      })} */}
+      {/* Article Row End  */}
       <div className="row">
-        <h3 style={{ marginLeft: "10px" }}>Related Articles</h3>
         {/* Column One Start*/}
-        {articleList.map((article) => {
+        {articleList.slice(0, 4).map((article) => {
           return (
             <div className="col-lg-12 mt-2 mb-3">
               <div class="card">
-                {/* <img
-                src="https://thumbs.dreamstime.com/b/molecular-structure-background-science-template-wallpaper-banner-dna-molecules-asbtract-scientific-molecule-wave-flow-192526703.jpg"
-                class="card-img-top"
-                alt="..."
-              /> */}
                 <div class="card-body">
                   <h5 class="card-title">{article.title}</h5>
                   <p class="card-text">{article.description}</p>
-                  <Link
-                    to={{
-                      pathname: "/article",
-                      data: article.id,
-                    }}
-                    class="btn btn-info"
-                  >
+                  <a href={"/article/" + article.id} class="btn btn-info">
                     READ MORE
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
