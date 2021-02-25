@@ -15,7 +15,7 @@ export default function SingleArticle(props) {
   const [loadingStatus, setloadingStatus] = useState(false);
 
   useEffect(() => {
-    if (!props.location.data) {
+    if (!props.match.params.id) {
       window.location = "/articles";
     }
 
@@ -23,7 +23,7 @@ export default function SingleArticle(props) {
       .get(
         process.env.REACT_APP_BACKEND_URL +
           "/api/article/" +
-          props.location.data
+          props.match.params.id
       )
       .then((res) => {
         settitle(res.data.title);
@@ -46,6 +46,8 @@ export default function SingleArticle(props) {
             <div className="header-wraperArticle ">
               <div className="main-infoArticleHeader ">
                 {" "}
+                <br />
+                <br />
                 <h1 style={{ fontWeight: "bolder" }}>Articles</h1>
                 <p>
                   Blogging is good for your career. A well-executed blog sets
@@ -58,7 +60,7 @@ export default function SingleArticle(props) {
             <div className="container mt-5 mb-5">
               <div className="row">
                 {" "}
-                <div className="col-lg-9">
+                <div className="col-lg-9 mb-5">
                   <img src={coverImage} id="SingleArticleCoverImage" />
                   <br />
                   <br />

@@ -13,11 +13,12 @@ import TableRow from "@material-ui/core/TableRow";
 const columns = [
   { id: "Product", label: "Product", minWidth: 170 },
   { id: "Price", label: "Price", minWidth: 100 },
+  { id: "editID", label: "", minWidth: 100 },
   { id: "deleteID", label: "", minWidth: 100 },
 ];
 
-function createData(Product, Price, deleteID) {
-  return { Product, Price, deleteID };
+function createData(Product, Price, editID, deleteID) {
+  return { Product, Price, editID, deleteID };
 }
 
 const useStyles = makeStyles({
@@ -53,7 +54,12 @@ export default function AdminProductTable() {
 
   //map table row data
   const rows = productList.map((product) => {
-    return createData(product.title, product.price + " LKR", product.id);
+    return createData(
+      product.title,
+      product.price + " LKR",
+      product.id,
+      product.id
+    );
   });
 
   function deleteProduct(value) {
@@ -122,6 +128,12 @@ export default function AdminProductTable() {
                             >
                               Remove
                             </button>
+                          ) : column.id === "editID" ? (
+                            <a href={"/editproduct/" + value}>
+                              <button className="btn btn-warning btn-sm">
+                                Edit
+                              </button>
+                            </a>
                           ) : (
                             value
                           )}

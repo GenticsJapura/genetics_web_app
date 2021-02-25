@@ -11,13 +11,14 @@ import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 
 const columns = [
-  { id: "id", label: "ID", minWidth: 170 },
-  { id: "title", label: "Title", minWidth: 100 },
+  { id: "title", label: "Title", minWidth: 170 },
+  { id: "date", label: "Date", minWidth: 100 },
+  { id: "editID", label: "", minWidth: 100 },
   { id: "deleteID", label: "", minWidth: 100 },
 ];
 
-function createData(id, title, deleteID) {
-  return { id, title, deleteID };
+function createData(title, date, editID, deleteID) {
+  return { title, date, editID, deleteID };
 }
 
 const useStyles = makeStyles({
@@ -53,7 +54,7 @@ export default function AdminNewsTable() {
 
   //map table row data
   const rows = newsList.map((news) => {
-    return createData(news.id, news.title, news.id);
+    return createData(news.title, news.date, news.id, news.id);
   });
 
   function deleteNews(value) {
@@ -119,6 +120,12 @@ export default function AdminNewsTable() {
                             >
                               Remove
                             </button>
+                          ) : column.id === "editID" ? (
+                            <a href={"/editnews/" + value}>
+                              <button className="btn btn-warning btn-sm">
+                                Edit
+                              </button>
+                            </a>
                           ) : (
                             value
                           )}

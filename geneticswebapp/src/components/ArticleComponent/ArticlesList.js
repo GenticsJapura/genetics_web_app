@@ -41,8 +41,7 @@ export default function ArticlesList() {
 
                     <Link
                       to={{
-                        pathname: "/article",
-                        data: article.id,
+                        pathname: "/article/" + article.id,
                       }}
                       class="btn btn-info"
                     >
