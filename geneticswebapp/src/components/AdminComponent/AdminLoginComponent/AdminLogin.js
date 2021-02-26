@@ -80,6 +80,7 @@ export default function AdminLogin() {
             <button type="submit" class="btn btn-primary">
               LOGIN
             </button>
+            <a href="/forgotpassword">forgot password</a>
           </form>
         </div>
       </div>
