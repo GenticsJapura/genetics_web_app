@@ -123,4 +123,61 @@ const loginAdmin = async (req, res) => {
   }
 };
 
-module.exports = { registerAdmin, loginAdmin };
+//get admin details
+const getResetAdminDetails = async (req, res) => {
+  try {
+    const { email } = req.body;
+    let query = await firestore
+      .collection("admins")
+      .where("email", "==", email)
+      .get();
+    if (!query.empty) {
+      let snapshot = query.docs[0];
+      let email = snapshot.data().email;
+      let id = snapshot.id;
+
+      const user = {
+        id,
+        email,
+      };
+
+      res.send(user);
+    }
+  } catch (error) {
+    res.status(400).send(error.message);
+  }
+};
+
+//reset admin Function
+const resetPassword = async (req, res, next) => {
+  try {
+    let { userID, email, password } = req.body;
+
+    //Encrypt Password
+
+    //10 is enogh..if you want more secured.user a value more than 10
+    let salt = await bcrypt.genSalt(10);
+
+    //hashing password
+    password = await bcrypt.hash(password, salt);
+
+    const data = {
+      email,
+      password,
+    };
+
+    const admin = await firestore.collection("admins").doc(userID);
+    await admin.update(data);
+    res.send("Admin record updated successfully");
+  } catch (error) {
+    res.status(400).send(error.message);
+    console.log(error);
+  }
+};
+
+module.exports = {
+  registerAdmin,
+  loginAdmin,
+  getResetAdminDetails,
+  resetPassword,
+};

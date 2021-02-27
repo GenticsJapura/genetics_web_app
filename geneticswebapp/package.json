@@ -17,6 +17,7 @@
     "emailjs": "^3.4.0",
     "emailjs-com": "^2.6.4",
     "firebase": "^8.2.6",
+    "jquery": "^3.5.1",
     "particles.js": "^2.0.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",

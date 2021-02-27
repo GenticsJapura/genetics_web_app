@@ -28,6 +28,7 @@ import News from "./components/NewsComponent/News";
 import AdminAddNews from "./components/AdminComponent/AdminDashboard/AdminAddNews";
 import SingleNews from "./components/NewsComponent/SingleNews";
 import AdminEditNews from "./components/AdminComponent/AdminDashboard/AdminEditNews";
+import AdminForgotPassword from "./components/AdminComponent/AdminLoginComponent/AdminForgotPassword";
 function App() {
   return (
     <React.Fragment>
@@ -142,6 +143,8 @@ function App() {
             <NavbarTwo />
             <MemberLogin />
           </Route>
+
+          <Route path="/forgotpassword" exact component={AdminForgotPassword} />
 
           <Route path="/adminlogin" exact>
             <NavbarTwo />
