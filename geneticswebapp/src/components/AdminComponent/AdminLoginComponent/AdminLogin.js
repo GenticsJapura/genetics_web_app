@@ -52,7 +52,6 @@ export default function AdminLogin() {
             ) : (
               ""
             )}
-
             <div class="form-group">
               <label>email</label>
               <input
@@ -80,7 +79,8 @@ export default function AdminLogin() {
             <button type="submit" class="btn btn-primary">
               LOGIN
             </button>
-            <a href="/forgotpassword">forgot password</a>
+            &nbsp;&nbsp;
+            <a href="/forgotpassword">Forgot password</a>
           </form>
         </div>
       </div>
